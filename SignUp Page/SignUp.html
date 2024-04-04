@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="src/albertos_pizza_banner_2.png" alt="Pizza_banner">
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#">Your Order</a></li>
+                <li><a href="#">Our Products</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+            <img src="src/iconmonstr-basket-6.svg" alt="basket" class="basket-menu">
+            <div class="basket-menu">
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h1>Sign Up for an Account</h1>
+            <form action="#">
+                <div class="input-field">
+                    <label for="fullname">Fullname</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+                    <p class="error" id="fullname-error">Please enter your fullname.</p>
+                </div>
+                <div class="input-field">
+                    <label for="phone">Phone Number</label>
+                    <p class="tip">We only accept Philippine-based phone numbers.</p>
+                    <input type="tel" id="phone" name="phone" placeholder="0987-654-3210">
+                    <p class="error" id="phone-error">Please enter a valid phone number.</p>
+                </div>
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    <p class="tip">We require your password to have the following constraints:</p>
+                    <ul class="password-constraints">
+                        <li>Must contain at least one symbol character.</li>
+                        <li>Must contain at least one uppercase letter.</li>
+                        <li>Must be at least 6 characters in length.</li>
+                    </ul>
+                    <input type="password" id="password" name="password">
+                    <p class="error" id="password-error">The password must meet the requirements mentioned above.</p>
+                </div>
+                <button type="submit" class="signup-button">Sign Up</button>
+                <button type="button" class="google-signup-button">Sign Up with Google</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+          <div>
+            <ul>
+              <li><a href="#">Sign-up</a></li>
+              <li><a href="#">Log-In</a></li>
+              <li><a href="#">Your Orders</a></li>
+              <li><a href="#">View our Pizzas</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><a href="#">View our side meals</a></li>
+              <li><a href="#">About Alberto's Pizza</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><a href="#"><img src="src/iconmonstr-facebook-4.svg" alt="Facebook icon"> Follow us on Facebook</a></li>
+              <li>© Alberto's Pizza. All rights reserved.</li>
+            </ul>
+          </div>
+        </div>
+      </footer>      
+
+    <script src="signup.js"></script>
+</body>
+</html>
