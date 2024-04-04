@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-image"></div>
+  <header class="header">
+    <div class="logo-container">
+      <img src="src/albertos_pizza_banner_2.png" alt="Pizza_banner">
+    </div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#">Your Order</a></li>
+        <li><a href="#">Our Products</a></li>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Sign Up</a></li>
+      </ul>
+      <img src="src/iconmonstr-basket-6.svg" alt="basket" class="basket-menu">
+      <div class="hamburger-menu">
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="container">
+        <h1>Log In to your Account</h1>
+        <form action="#">
+            <div class="input-field">
+                <label for="phone-number">Phone number</label>
+                <input type="tel" id="phone-number" name="phone-number" placeholder="0987-654-3210">
+                <p class="error" id="phone-error">The phone number you entered does not match the required format.</p>
+            </div>
+            <div class="input-field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <p class="error" id="password-error">The password must be at least 6 characters long.</p>
+                <a href="#">Forgot password?</a>
+            </div>
+            <div class="checkbox-field">
+                <input type="checkbox" id="remember-me" name="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <button type="submit" class="login-button">Log-In</button>
+            <button type="button" class="login-button">Sign up with Google</button>
+        </form>
+    </div>
+</main>
+<footer>
+  <div class="footer-content">
+    <div>
+      <ul>
+        <li><a href="#">Sign-up</a></li>
+        <li><a href="#">Log-In</a></li>
+        <li><a href="#">Your Orders</a></li>
+        <li><a href="#">View our Pizzas</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><a href="#">View our side meals</a></li>
+        <li><a href="#">About Alberto's Pizza</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><a href="#"><img src="src/iconmonstr-facebook-4.svg" alt="Facebook icon"> Follow us on Facebook</a></li>
+        <li>© Alberto's Pizza. All rights reserved.</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
