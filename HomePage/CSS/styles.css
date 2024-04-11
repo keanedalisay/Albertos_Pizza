@@ -1,0 +1,751 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header__logo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo-image {
+    width: 150px;
+    height: 60px;
+}
+
+.header_menu-button {
+    display: none;
+}
+
+.header__nav-list2 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header__nav-link2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    color: #212121;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.header__nav-item2 {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.header__nav-list {
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+}
+
+.header__nav-list.show {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.header__nav-list a {
+    text-decoration: none;
+    color: #212121;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.menu-button {
+    display: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    color: #212121;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header__nav {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 5%;
+    position: relative;
+}
+
+.header__nav-link {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    color: #212121;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.header__nav-item {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.header__nav-icon {
+    list-style: none;
+    margin-left: 40px;
+}
+
+.main__line {
+    height: 5px;
+    background-color: #FFFF7E;
+    width: 100%;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+    z-index: -1;
+    background-image: url("../images/pizza_banner_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+}
+
+.main {
+    position: relative;
+    height: 1000px;
+}
+
+.main__title {
+    padding-top: 100px;
+    display: flex;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.main__title-text {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 80px;
+    color: #212121;
+    text-align: center;
+    margin-top: 0;
+}
+
+.main__image {
+    width: 320px;
+    height: 200px;
+    margin: 0 auto;
+    padding-left: 35px;
+}
+
+.main__logo-image {
+    width: 320px;
+    height: 180px;
+}
+
+.main__subtitle {
+    display: flex;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.main__subtitle-text {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    color: #212121;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.main__button {
+    background-color: #FFFF7E;
+    border-radius: 14px;
+    width: 300px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 3%;
+    transition: background-color 0.3s;
+}
+
+.main__button:hover {
+    background-color: #CCCCCC;
+}
+
+.main__button-title {
+    margin-left: 10px;
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: 700;
+    color: #212121;
+}
+
+.main__button-title:hover {
+    text-decoration: none;
+}
+
+.main-odernow-button {
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+.Featured {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Featured__container {
+    display: flex;
+    align-items: center;
+}
+
+.Featured__line1,
+.Featured__line2 {
+    height: 2px;
+    background-color: #FFFF7E;
+    flex-grow: 1;
+}
+
+.Featured__title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    color: #212121;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.Pizza {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 370px;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+}
+
+.Pizza_box {
+    height: 408px;
+    width: 300px;
+    margin: 0 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Pizza_box_image {
+    height: 20%;
+    margin-bottom: 6px;
+}
+
+.Pizza_box_heading,
+.Pizza_box_heading2,
+.Pizza_box_subheading,
+.Pizza_box_addtocart,
+.Pizza_box_customize {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.footer_block2_info {
+    font-size: 14px;
+    width: 300px;
+}
+
+#aloha {
+    height: 100px;
+    background-color: blue;
+    background-image: url("../images/aloha_pizza.jpg");
+    background-size: cover;
+}
+
+#royal {
+    height: 100px;
+    background-color: blue;
+    background-image: url("../images/royal_flush_pizza.jpg");
+    background-size: cover;
+}
+
+#marina {
+    height: 100px;
+    background-color: blue;
+    background-image: url("../images/pizza_d_marina.jpg");
+    background-size: cover;
+}
+
+#supreme {
+    height: 100px;
+    background-color: blue;
+    background-image: url("../images/pizza_supreme.jpg");
+    background-size: cover;
+}
+
+.Pizza_box_heading {
+    font-weight: 400;
+    height: 30px;
+    font-size: 25px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #FFFF7E;
+}
+
+.Pizza_box_heading2 {
+    font-weight: 100;
+    height: 50px;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #FFFF7E;
+}
+
+.Pizza_box_subheading {
+    margin-top: 8px;
+    font-weight: 300;
+    height: 54px;
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #ffffff;
+}
+
+.Pizza_box_addtocart {
+    width: 60%;
+    height: 35px;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 10px;
+}
+
+.Pizza_box_customize {
+    width: 60%;
+    height: 35px;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.Pizza_box_addtocart:hover {
+    background-color: #CCCCCC;
+}
+
+.Pizza_box_customize:hover {
+    background-color: #CCCCCC;
+}
+
+#Pizza2 {
+    margin-top: 50px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 160px;
+    background-color: #F6F6F6;
+    margin-top: 30px;
+}
+
+.footer_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.footer_block_1half {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.footer_block_2half {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.footer_block2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.footer_block2_1half {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.footer_block2_2half {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.footer_block_text {
+    margin: 0 10px;
+    white-space: nowrap;
+    text-decoration: underline;
+}
+
+.footer_block2_text {
+    white-space: nowrap;
+    text-decoration: underline;
+}
+
+.footer_block2_icon {
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+.footer_block2-image {
+    width: 15px;
+    height: 15px;
+}
+
+.footer_block2_info {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+    color: #212121;
+    width: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        display: block;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+    }
+    .background{
+        display: none;
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__nav-list2 {
+        display: none;
+    }
+
+    .header__nav-link2 {
+        display: none;
+    }
+
+    .header__nav-item2 {
+        display: none;
+    }
+
+    .header__nav-icon-image {
+        display: flex;
+    }
+
+    .header__logo {
+        flex: 1;
+    }
+
+    .header__nav {
+        flex: 1;
+    }
+
+    .header__nav-icon {
+        list-style: none;
+        margin-left: 40px;
+    }
+
+    .menu-button {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 20px;
+        color: #212121;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: block;
+    }
+
+    .header__nav-list {
+        width: 100%;
+        left: 0;
+        position: fixed;
+        top: 60px;
+        background-color: #fff;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        list-style: none;
+        padding: 0;
+        display: none;
+        overflow-y: auto;
+    }
+
+    .header__nav-list.show {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .background {
+        height: 500px;
+        opacity: 1;
+        display: none;
+    }
+
+    .main {
+        height: auto;
+        background-image: url("pizza_banner2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: 1;
+        padding-top: 0px;
+    }
+
+    .main__title {
+        width: 90%;
+        height: 100%;
+        opacity: 1;
+        margin-top: 0px;
+        padding-top: 50px;
+    }
+
+    .main__image {
+        width: 150px;
+        height: 80px;
+        margin: 0 auto;
+        padding-left: 65px;
+    }
+
+    .main__logo-image {
+        width: 150px;
+        height: 80px;
+    }
+
+    .main__title-text {
+        font-size: 40px;
+        justify-content: center;
+    }
+
+    .main__subtitle {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .main__subtitle-text {
+        font-size: 20px;
+    }
+
+    .main__button {
+        width: 200px;
+    }
+
+    .main__button-title {
+        font-size: 16px;
+    }
+
+    .main__image {
+        width: 200px;
+        height: 120px;
+    }
+
+    .Featured {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .Featured__title {
+        margin-bottom: 20px;
+    }
+
+    .Featured__line1,
+    .Featured__line2 {
+        width: 100%;
+        height: 2px;
+        background-color: #FFFF7E;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .Featured__title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    #Pizza1 {
+        height: 1100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Pizza_box {
+        height: auto;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .Pizza_box_image {
+        height: 120px;
+    }
+
+    .Pizza_box_heading {
+        font-size: 24px;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    .Pizza_box_heading2 {
+        font-size: 18px;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    .Pizza_box_subheading {
+        font-size: 14px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .Pizza_box_addtocart,
+    .Pizza_box_customize {
+        width: 90%;
+        font-size: 16px;
+        height: 35px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #F6F6F6;
+        margin-top: 30px;
+        height: 250px;
+    }
+
+    .footer_block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .footer_block2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .footer_block_1half {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .footer_block_2half {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .footer_block_text,
+    .footer_block2_text {
+        margin: 5px;
+        font-size: 12px;
+        text-decoration: underline;
+        color: #212121;
+        text-align: center;
+    }
+
+    .footer_block2_1half {
+        width: 90%;
+    }
+
+    .footer_block2_2half {
+        width: 90%;
+    }
+
+    .footer_block2_icon {
+        width: 15px;
+    }
+
+    .footer_block2_text {
+        font-size: 14px;
+        color: #212121;
+        text-align: left;
+    }
+
+    .footer_block2_icon {
+        margin-right: 20px;
+    }
+
+    .footer_block2-image {
+        width: 15px;
+        height: 15px;
+        margin-right: 20px;
+    }
+
+    .footer_block2_info {
+        font-size: 12px;
+        color: #212121;
+        text-align: left;
+        margin-top: 10px;
+    }
+}
