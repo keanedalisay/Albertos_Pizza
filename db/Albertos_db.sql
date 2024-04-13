@@ -184,10 +184,9 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `user_id` varchar(255) NOT NULL,
   `user_fullname` varchar(255) NOT NULL,
-  `user_email` varchar(255) NOT NULL,
   `user_contact_num` varchar(255) NOT NULL,
   `user_password` varchar(255) NOT NULL,
-  `user_addresses` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`user_addresses`)),
+  `user_addresses` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin CHECK (json_valid(`user_addresses`)),
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
