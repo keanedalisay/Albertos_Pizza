@@ -16,3 +16,4 @@ require_once __DIR__.'/router.php';
 // ##################################################
 
 get('/', '../src/views/home.php');
+get("/account/sign-up", "../src/views/sign-up.php");

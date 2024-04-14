@@ -3,33 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-    <link rel="stylesheet" href="signup.css">
+    <title>Alberto's Pizza | Sign Up</title>
+    <link rel="stylesheet" href="/styles/global.css" type="text/css">
+    <link rel="stylesheet" href="/styles/sign-up.css" type="text/css">
+    <link rel="shortcut icon"  href="/assets/icons/albertos_pizza_mascot.png" />
+    <script src="/scripts/global.js" defer></script> 
+    <script src="/scripts/sign-up.js" defer></script>
 </head>
 <body>
     <div class="background-image"></div> <!-- Add background image div here -->
-    
-    <header class="header">
-        <div class="logo-container">
-            <img src="src/albertos_pizza_banner_2.png" alt="Pizza_banner">
-        </div>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li><a href="#">Your Order</a></li>
-                <li><a href="#">Our Products</a></li>
-                <li><a href="#">Log In</a></li>
-                <li><a href="#">Sign Up</a></li>
-            </ul>
-            <img src="src/iconmonstr-basket-6.svg" alt="basket" class="basket-menu">
-            <div class="basket-menu">
-            </div>
-        </nav>
-    </header>
+    <?php require_once dirname(__DIR__, 1)."/components/header.php" ?>
 
     <main class="main">
-        <div class="container">
+        <div class="sign_up_container">
             <h1>Sign Up for an Account</h1>
-
             <form action="../db_connections/process-signup.php" method="post">
                 <div class="input-field">
                     <label for="fullname">Full Name</label>
@@ -60,31 +47,6 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-          <div>
-            <ul>
-              <li><a href="#">Sign-up</a></li>
-              <li><a href="#">Log-In</a></li>
-              <li><a href="#">Your Orders</a></li>
-              <li><a href="#">View our Pizzas</a></li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li><a href="#">View our side meals</a></li>
-              <li><a href="#">About Alberto's Pizza</a></li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li><a href="#"><img src="src/iconmonstr-facebook-4.svg" alt="Facebook icon"> Follow us on Facebook</a></li>
-              <li>© Alberto's Pizza. All rights reserved.</li>
-            </ul>
-          </div>
-        </div>
-      </footer>      
-
-    <script src="signup.js"></script>
+    <?php require_once dirname(__DIR__, 1)."/components/footer.php" ?>     
 </body>
 </html>
