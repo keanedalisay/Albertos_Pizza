@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alberto's Pizza | Home</title>
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="shortcut icon"  href="assets/icons/albertos_pizza_mascot.png" />
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="shortcut icon"  href="/assets/icons/albertos-pizza-mascot.png" />
     <script src="scripts/global.js" defer></script> 
 </head>
 <body>
@@ -18,13 +18,13 @@
     <div class="main__title" id="main__1">
         <h1 class="main__title-text">Experience the unforgettable taste of</h1>
     </div>
-    <div class="main__image" id="main__1"><img src="assets/images/albertos_pizza_banner.png" class="main__logo-image"></div>
+    <div class="main__image" id="main__1"><img src="/assets/images/albertos-pizza-logo.png" class="main__logo-image"></div>
     <div class="main__subtitle" id="main__1">
         <h2 class="main__subtitle-text">a flavor you’ll crave again and again.</h2>
     </div>
     <div class="main__button" id="main__1">
         <h4 class="main__button-title">Ordernow</h4>
-        <div class="main__button-image"><img src="assets/icons/iconmonstr-arrow-right-circle-filled.svg" class="main-odernow-button"></div> 
+        <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg" class="main-odernow-button"></div> 
     </div>
 </div>
     

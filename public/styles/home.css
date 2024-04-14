@@ -11,7 +11,7 @@
   width: 100%;
   height: 1000px;
   z-index: -1;
-  background-image: url("../assets/images/pizza_banner_home.png");
+  background-image: url("../assets/images/pizza-banner-home.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.2;
@@ -158,28 +158,28 @@
 #aloha {
   height: 100px;
   background-color: blue;
-  background-image: url("../assets/images/pizzas/aloha_pizza.jpg");
+  background-image: url("../assets/images/pizzas/aloha-pizza.jpg");
   background-size: cover;
 }
 
 #royal {
   height: 100px;
   background-color: blue;
-  background-image: url("../assets/images/pizzas/royal_flush.jpg");
+  background-image: url("../assets/images/pizzas/royal-flush.jpg");
   background-size: cover;
 }
 
 #marina {
   height: 100px;
   background-color: blue;
-  background-image: url("../assets/images/pizzas/pizza_d_marina.jpg");
+  background-image: url("../assets/images/pizzas/pizza-d-marina.jpg");
   background-size: cover;
 }
 
 #supreme {
   height: 100px;
   background-color: blue;
-  background-image: url("../assets/images/pizzas/pizza_supreme.jpg");
+  background-image: url("../assets/images/pizzas/pizza-supreme.jpg");
   background-size: cover;
 }
 
@@ -254,7 +254,7 @@
 
   .main {
       height: auto;
-      background-image: url("../assets/images/pizza_banner_home.png");
+      background-image: url("../assets/images/pizza-banner-home.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;

@@ -6,7 +6,7 @@
     <title>Alberto's Pizza | Sign Up</title>
     <link rel="stylesheet" href="/styles/global.css" type="text/css">
     <link rel="stylesheet" href="/styles/sign-up.css" type="text/css">
-    <link rel="shortcut icon"  href="/assets/icons/albertos_pizza_mascot.png" />
+    <link rel="shortcut icon"  href="/assets/icons/albertos-pizza-mascot.png" />
     <script src="/scripts/global.js" defer></script> 
     <script src="/scripts/sign-up.js" defer></script>
 </head>

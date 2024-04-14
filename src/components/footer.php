@@ -10,7 +10,7 @@
             <li class="links__link"><a href="/about">About Alberto's Pizza</a></li>
         </menu>
         <div>
-            <a class="footer__social_link" href="https://www.facebook.com/albertospizza"><img src="assets/icons/iconmonstr-facebook-4.svg" alt=""> Follow us on Facebook</a>      
+            <a class="footer__social_link" href="https://www.facebook.com/albertospizza"><img src="/assets/icons/iconmonstr-facebook-4.svg" alt=""> Follow us on Facebook</a>      
             <small class="footer__notice">Copyright © 2024 Alberto’s Pizza. All rights reserved.</small>
         </div>
     </div>
