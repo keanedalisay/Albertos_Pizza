@@ -1,9 +1,9 @@
 <?php
 
-$host = "localhost";
+$host = "albpz_db";
 $dbname = "albertos_database";
 $username = "root";
-$password = "";
+$password = "123";
 
 $mysqli = new mysqli(hostname: $host, 
                     username: $username, 

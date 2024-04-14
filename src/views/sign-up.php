@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alberto's Pizza | Sign Up</title>
     <link rel="stylesheet" href="/styles/global.css" type="text/css">
     <link rel="stylesheet" href="/styles/sign-up.css" type="text/css">
-    <link rel="shortcut icon"  href="/assets/icons/albertos-pizza-mascot.png" />
-    <script src="/scripts/global.js" defer></script> 
+    <link rel="shortcut icon" href="/assets/icons/albertos-pizza-mascot.png" />
+    <script src="/scripts/global.js" defer></script>
     <script src="/scripts/sign-up.js" defer></script>
 </head>
+
 <body>
     <div class="background-image"></div> <!-- Add background image div here -->
-    <?php require_once dirname(__DIR__, 1)."/components/header.php" ?>
+    <?php require_once dirname(__DIR__, 1) . "/components/header.php" ?>
 
     <main class="main">
         <div class="sign_up_container">
             <h1>Sign Up for an Account</h1>
-            <form action="../db_connections/process-signup.php" method="post">
+            <form action="/account/sign-up" method="post">
                 <div class="input-field">
                     <label for="fullname">Full Name</label>
                     <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
@@ -47,6 +49,7 @@
         </div>
     </main>
 
-    <?php require_once dirname(__DIR__, 1)."/components/footer.php" ?>     
+    <?php require_once dirname(__DIR__, 1) . "/components/footer.php" ?>
 </body>
+
 </html>

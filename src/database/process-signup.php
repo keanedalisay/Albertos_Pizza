@@ -6,7 +6,7 @@ if( empty($_POST["fullname"])){
 
 $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-$mysqli = require __DIR__ . "../database.php";
+$mysqli = require __DIR__ . "/database.php";
 
 $fullname = $_POST["fullname"];
 $phone = $_POST["phone"];
@@ -28,7 +28,7 @@ $stmt->bind_param("ssss", $uniqueId, $_POST["fullname"], $_POST["phone"], $passw
 
 if($stmt->execute()){   
 
-    header("Location: ../SignUp_Page/signup-success.html"); // Current Placeholder redirect to indicate successful sign up 
+    header("Location: /account/log-in"); // Current Placeholder redirect to indicate successful sign up 
     exit;
 
 }
@@ -39,4 +39,3 @@ else{
         die($mysqli->error . " " . $mysqli->errno);
     }
 }
-?>

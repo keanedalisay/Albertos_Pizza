@@ -3,7 +3,7 @@
 $is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $mysqli = require __DIR__ . "/../db_connections/database.php";
+    $mysqli = require dirname(__DIR__, 1) . "/database/database.php";
 
 
     $sql = sprintf(
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($user) {
         if (password_verify($_POST["password"], $user["user_password"])) {
-            header("Location: login-success.html");
+            header("Location: /");
         }
     }
 
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <em style="color: red;">Invalid Login</em>
             <?php endif; ?>
 
-            <form method="post">
+            <form action="/account/log-in" method="post">
                 <div class="input-field">
                     <label for="phone-number">Phone number</label>
                     <input type="tel" id="phone-number" name="phone-number" placeholder="0987-654-3210">
