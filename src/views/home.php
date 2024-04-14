@@ -10,29 +10,8 @@
     <script src="scripts/global.js" defer></script> 
 </head>
 <body>
-<header class="header">
-    <div class="container container--header">
-        <a href="/"><img class="header__logo" src="assets/images/albertos_pizza_banner.png" alt="The Alberto's Pizza official logo. Redirects to the home page." class="header__logo-image"></a>
-        <nav class="header__nav">
-            <button class="menu_btn" data-js="menu_btn">
-                 Menu <img class="menu_btn__icon" data-js="menu_btn_icon" src="assets/icons/iconmonstr-caret-down-circle-filled.svg" alt=""></button>
-            <menu class="links links--menu_desktop">
-                <li class="links__link"><a href="/orders">Your Orders</a></li>
-                <li class="links__link"><a href="/products">Our Products</a></li>
-                <li class="links__link"><a href="/account/log-in">Log-In</a></li>
-                <li class="links__link"><a href="/account/sign-up">Sign-Up</a></li>
-            </menu>
-            <a class="cart_link" href="/cart"><img class="cart_link__icon" src="assets/icons/iconmonstr-basket-6.svg" alt="Access your product cart."></a>
-            <menu class="links links--menu_mobile" data-js="menu_mobile">
-                <li class="links__link"><a href="/account/sign-up">Sign-up for a new account</a></li>
-                <li class="links__link"><a href="/account/log-in">Log-in to your account</a></li>
-                <li class="links__link"><a href="/products">View and order our products</a></li>
-                <li class="links__link"><a href="/cart">Check your cart</a></li>
-                <li class="links__link"><a href="/orders">View your orders</a></li>
-            </menu>
-        </nav>
-    </div>
-</header>
+
+<?php require_once dirname(__DIR__, 1)."/components/header.php" ?>
     
 <div class="background"></div>
 <div class="main">
@@ -95,23 +74,8 @@
         <div class="Pizza_box_customize">customize</div>
     </div>
 </div>
-<footer class="footer">
-    <div class="container container--footer">
-        <menu class="links links--footer">
-            <li class="links__link"><a href="/account/sign-up">Sign-Up</a></li>
-            <li class="links__link"><a href="/account/log-in">Log-In</a></li>
-            <li class="links__link"><a href="/cart">Your Cart</a></li>
-            <li class="links__link"><a href="/orders">Your Orders</a></li>
-            <li class="links__link"><a href="/products/pizzas/regular">View our Pizza's</a></li>
-            <li class="links__link"><a href="/products/sides">View our Side Meals</a></li>
-            <li class="links__link"><a href="/about">About Alberto's Pizza</a></li>
-        </menu>
-        <div>
-            <a class="footer__social_link" href="https://www.facebook.com/albertospizza"><img src="assets/icons/iconmonstr-facebook-4.svg" alt=""> Follow us on Facebook</a>      
-            <small class="footer__notice">Copyright © 2024 Alberto’s Pizza. All rights reserved.</small>
-        </div>
-    </div>
-</footer>
+
+<?php require_once dirname(__DIR__, 1)."/components/footer.php" ?>
 
 </body>
 </html>
