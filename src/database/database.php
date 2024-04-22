@@ -1,19 +1,16 @@
 <?php
 
-$host = "albpz_db";
+$host = "localhost";
 $dbname = "albertos_database";
 $username = "root";
-$password = "123";
+$password = "";
 
-$mysqli = new mysqli(hostname: $host, 
-                    username: $username, 
-                    password: $password, 
-                    database: $dbname);
-
-
-if( $mysqli-> connect_errno ){
-    die("Connection Error: " . $mysqli->connect_error);
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    die("Connection Error: " . $e->getMessage());
 }
 
-return $mysqli;
+return $pdo;
 ?>

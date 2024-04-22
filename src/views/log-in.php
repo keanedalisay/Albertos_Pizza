@@ -1,31 +1,49 @@
 <?php
+// Defining a class for handling user authentication (Log in)
+class UserAuthenticator {
+    private $pdo;
+
+    // Constructor to initialize the PDO object
+    public function __construct($pdo) {
+        $this->pdo = $pdo;
+    }
+
+    // Method to authenticate user
+    public function authenticateUser($phoneNumber, $password) {
+        $sql = "SELECT * FROM users WHERE user_contact_num = :phone_number";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute(array(':phone_number' => $phoneNumber));
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user && password_verify($password, $user["user_password"])) {
+            return $user;
+        } else {
+            return false;
+        }
+    }
+}
 
 $is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $mysqli = require dirname(__DIR__, 1) . "/database/database.php";
+    //  database connection file
+    require dirname(__DIR__, 1) . "/database/database.php";
 
+    // Creating an instance of the UserAuthenticator class
+    $userAuthenticator = new UserAuthenticator($pdo);
 
-    $sql = sprintf(
-        "SELECT * FROM users WHERE user_contact_num = '%s'",
-        $mysqli->real_escape_string($_POST["phone-number"])
-    );
-
-
-    $result = $mysqli->query($sql);
-
-    $user = $result->fetch_assoc();
+    // Authenticate user
+    $user = $userAuthenticator->authenticateUser($_POST["phone-number"], $_POST["password"]);
 
     if ($user) {
-        if (password_verify($_POST["password"], $user["user_password"])) {
-            header("Location: /");
-        }
+        // Password is correct, redirect to home page
+        header("Location: /");
+        exit;
+    } else {
+        // Set flag to indicate invalid login
+        $is_invalid = true;
     }
-
-    $is_invalid = true;
 }
-
-
 ?>
 
 <!DOCTYPE html>
