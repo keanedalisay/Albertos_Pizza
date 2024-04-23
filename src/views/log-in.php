@@ -1,4 +1,7 @@
 <?php
+// Include the DatabaseConnection class file
+require_once dirname(__DIR__, 1) . "/database/database.php";
+
 // Defining a class for handling user authentication (Log in)
 class UserAuthenticator {
     private $pdo;
@@ -26,8 +29,11 @@ class UserAuthenticator {
 $is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    //  database connection file
-    require dirname(__DIR__, 1) . "/database/database.php";
+    // Create an instance of DatabaseConnection
+    $databaseConnection = new DatabaseConnection("localhost", "albertos_database", "root", "");
+
+    // Call the connect() method to establish a connection
+    $pdo = $databaseConnection->connect();
 
     // Creating an instance of the UserAuthenticator class
     $userAuthenticator = new UserAuthenticator($pdo);
@@ -43,6 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Set flag to indicate invalid login
         $is_invalid = true;
     }
+
+    // closing the connection when done
+    $databaseConnection->close();
 }
 ?>
 

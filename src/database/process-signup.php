@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "/database.php";
 
 class User {
     
@@ -42,7 +43,12 @@ class User {
     }
 }
 
-$pdo = require __DIR__ . "/database.php";
+// Create an instance of DatabaseConnection
+$databaseConnection = new DatabaseConnection("localhost", "albertos_database", "root", "");
+
+// Call the connect() method to establish a connection
+$pdo = $databaseConnection->connect();
+
 $user = new User($pdo);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -55,3 +61,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         die($registerResult);
     }
 }
+?>
