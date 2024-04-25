@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password">
                     <p class="error" id="password-error">The password must be at least 6 characters long.</p>
-                    <a href="#">Forgot password?</a>
+                    <a href="/account/log-in/forgot-password">Forgot password?</a>
                 </div>
                 <div class="checkbox-field">
                     <input type="checkbox" id="remember-me" name="remember-me">
