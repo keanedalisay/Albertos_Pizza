@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Include the DatabaseConnection class file
 require_once dirname(__DIR__, 1) . "/database/database.php";
 
@@ -42,7 +43,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $user = $userAuthenticator->authenticateUser($_POST["phone-number"], $_POST["password"]);
 
     if ($user) {
-        // Password is correct, redirect to home page
+        $_SESSION['user_id'] = $user['user_id']; // Assuming user_id is the unique identifier for the user
+        $_SESSION['user_fullname'] = $user['user_fullname']; // Assuming user_id is the unique identifier for the user
+        $_SESSION['user_contact'] = $user['user_contact_num']; // Assuming user_id is the unique identifier for the user
+
         header("Location: /");
         exit;
     } else {

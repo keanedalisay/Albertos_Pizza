@@ -18,9 +18,12 @@ require_once __DIR__.'/router.php';
 get("/", "../src/views/home.php");
 get("/account/sign-up", "../src/views/sign-up.php");
 get("/account/log-in", "../src/views/log-in.php");
+get("/account/logout", "../src/views/logout.php");
+
 
 get("/account/log-in/forgot-password", "../src/views/forgot-password.php");
 get("/account/log-in/change-password", "../src/views/change-password.php");
 
 post("/account/sign-up", "../src/database/process-signup.php");
 post("/account/log-in", "../src/views/log-in.php");
+
