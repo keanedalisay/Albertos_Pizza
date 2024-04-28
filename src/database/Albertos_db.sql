@@ -82,14 +82,15 @@ DROP TABLE IF EXISTS `pizza_11_inch`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `pizza_11_inch` (
-  `price_quickmelt` int(11) NOT NULL,
-  `price_mozarella` int(11) NOT NULL,
-  `price_qm_and_mz` int(11) NOT NULL,
-  `pizza_id` varchar(255) DEFAULT NULL,
+  `price_quickmelt` INT(11),
+  `price_mozarella` INT(11),
+  `price_qm_and_mz` INT(11),
+  `pizza_id` INT NOT NULL,
   KEY `pizza_id` (`pizza_id`),
   CONSTRAINT `pizza_11_inch_ibfk_1` FOREIGN KEY (`pizza_id`) REFERENCES `pizzas` (`pizza_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
 
 --
 -- Dumping data for table `pizza_11_inch`
@@ -108,14 +109,15 @@ DROP TABLE IF EXISTS `pizza_9_inch`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `pizza_9_inch` (
-  `price_quickmelt` int(11) NOT NULL,
-  `price_mozarella` int(11) NOT NULL,
-  `price_qm_and_mz` int(11) NOT NULL,
-  `pizza_id` varchar(255) DEFAULT NULL,
+  `price_quickmelt` INT(11),
+  `price_mozarella` INT(11),
+  `price_qm_and_mz` INT(11),
+  `pizza_id` INT NOT NULL,
   KEY `pizza_id` (`pizza_id`),
   CONSTRAINT `pizza_9_inch_ibfk_1` FOREIGN KEY (`pizza_id`) REFERENCES `pizzas` (`pizza_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
 
 --
 -- Dumping data for table `pizza_9_inch`
@@ -134,12 +136,13 @@ DROP TABLE IF EXISTS `pizzas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `pizzas` (
-  `pizza_id` varchar(255) NOT NULL,
-  `pizza_name` varchar(255) NOT NULL,
-  `pizza_type` varchar(255) NOT NULL,
+  `pizza_id` INT AUTO_INCREMENT NOT NULL,
+  `pizza_name` VARCHAR(255) NOT NULL,
+  `pizza_type` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`pizza_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
 
 --
 -- Dumping data for table `pizzas`
