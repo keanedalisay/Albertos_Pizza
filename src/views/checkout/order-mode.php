@@ -33,7 +33,6 @@
             </fieldset>
             <fieldset class="control_btns">
                 <button class="control_btns__continue" type="submit">Continue</button>
-                <a href="#" class="control_btns__back"><span>Change Contact Info</span></a>
             </fieldset>
         </form>
     </main>
