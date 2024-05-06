@@ -84,6 +84,54 @@ fieldset {
   height: auto;
 }
 
+.dlvry_addrs {
+  margin: 50px 0;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.dlvry_addrs__label {
+  padding: 20px 20px;
+  width: 100%;
+  min-height: 75px;
+  background: #f6f6f6;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.dlvry_addrs__label>span:first-child {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.dlvry_addrs__label>span:last-child {
+  font-size: 14px;
+}
+
+.dlvry_addrs__label:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.dlvry_addrs__input {
+  position: absolute;
+  opacity: 0;
+}
+
+.dlvry_addrs__input:checked+.dlvry_addrs__label,
+.dlvry_addrs__label:hover {
+  background: #FFFF7E;
+}
+
+.dlvry_addrs__input:focus+.dlvry_addrs__label {
+  background: #FFFF7E;
+  outline: 3px solid blue;
+}
+
 .control_btns {
   display: flex;
   flex-flow: column nowrap;
@@ -116,6 +164,10 @@ fieldset {
 }
 
 @media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 30px;
+  }
+
   .order_mode_btns {
     flex-flow: column nowrap;
   }
