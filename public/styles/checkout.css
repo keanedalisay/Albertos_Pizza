@@ -1,0 +1,127 @@
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../assets/images/orange-outlined-pizza.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+}
+
+main {
+  margin: 100px auto;
+  padding: 0 40px;
+  max-width: 1000px;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 40px;
+  text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+fieldset {
+  border: none;
+}
+
+.order_mode_btns {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.order_mode_btns>input {
+  position: absolute;
+  opacity: 0;
+}
+
+.order_mode_btn {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: #f6f6f6;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.order_mode_btn:last-child {
+  margin-left: 50px;
+}
+
+.order_mode_input:checked+.order_mode_btn,
+.order_mode_btn:hover {
+  background: #FFFF7E;
+}
+
+.order_mode_input:focus+.order_mode_btn{
+  background: #FFFF7E;
+  border: 3px solid blue;
+}
+
+.order_mode_btn>img {
+  width: 50px;
+  height: auto;
+}
+
+.control_btns {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.control_btns__continue,
+.control_btns__back {
+  width: 100%;
+  max-width: 225px;
+  height: 45px;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  background: #f6f6f6;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.control_btns__continue {
+  background: #FFFF7E;
+}
+
+.control_btns__back {
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .order_mode_btns {
+    flex-flow: column nowrap;
+  }
+
+  .order_mode_btn:last-child {
+    margin-top: 25px;
+    margin-left: 0;
+  }
+}
