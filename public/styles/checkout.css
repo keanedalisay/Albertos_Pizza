@@ -26,8 +26,18 @@ h1 {
 
 h2 {
   margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
   font-size: 40px;
   text-align: center;
+}
+
+p {
+  margin: -20px auto 0 auto;
+  max-width: 400px;
+  text-align: justify;
+  text-wrap: balance;
 }
 
 form {
@@ -37,6 +47,17 @@ form {
 
 fieldset {
   border: none;
+}
+
+input {
+  padding: 0 10px;
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
+  display: block;
+  border: 1px solid #d9d4d7;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .order_mode_btns {
@@ -130,6 +151,36 @@ fieldset {
 .dlvry_addrs__input:focus+.dlvry_addrs__label {
   background: #FFFF7E;
   outline: 3px solid blue;
+}
+
+.cont_info {
+  margin: 30px auto;
+  max-width: 350px;
+}
+
+.cont_info_label {
+  display: block;
+}
+.cont_info_label > span {
+  margin-top: 10px;
+  display: block;
+  color: #5c5c5c;
+}
+.cont_info_label:not(.cont_info_label:first-child) {
+  margin-top: 30px;
+}
+.cont_info_input {
+  margin-top: 5px;
+}
+
+.send_code_btn {
+  margin-top: 10px;
+  width: 95px;
+  height: 35px;
+  background: #f6f6f6;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
 }
 
 .control_btns {
