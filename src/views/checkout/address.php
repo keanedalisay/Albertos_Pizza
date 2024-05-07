@@ -17,7 +17,7 @@
     <main>
         <h1>Step 2 of 3:</h1>
         <h2>Choose your delivery address</h2>
-        <form action="" method="post">
+        <form action="/checkout/contact-info" method="post">
             <fieldset class="dlvry_addrs">
                 <input class="dlvry_addrs__input" id="delivery-address_1" name="dlvry_addrs" value="test" type="radio">
                 <label class="dlvry_addrs__label" for="delivery-address_1">
