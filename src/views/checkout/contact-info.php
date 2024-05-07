@@ -19,7 +19,7 @@
         <h2>Fill in your contact information</h2>
         <p><b>As a guest user</b>, we require you to fill in your personal information. This is for our delivery riders
             to track you if you choose your order to be delivered.</p>
-        <form action="/checkout/contact-info" method="post">
+        <form action="/checkout/payment" method="post">
             <fieldset class="cont_info">
                 <label class="cont_info_label" for="full_name">Full Name</label>
                 <input class="cont_info_input" id="full_name" name="user_full_name" value="" type="text">
