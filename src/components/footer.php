@@ -9,7 +9,7 @@
             <?php if($logged_in): ?>
                 <!-- If user is logged in -->
                 <li class="links__link"><a href="/account">Your Account</a></li>
-                <li class="links__link"><a href="/cart">Your Cart</a></li>
+                <li class="links__link"><a href="/account/cart">Your Cart</a></li>
             <?php else: ?>
                 <!-- If user is not logged in -->
                 <li class="links__link"><a href="/account/sign-up">Sign-Up</a></li>

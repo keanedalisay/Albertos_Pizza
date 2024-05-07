@@ -43,9 +43,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $user = $userAuthenticator->authenticateUser($_POST["phone-number"], $_POST["password"]);
 
     if ($user) {
-        $_SESSION['user_id'] = $user['user_id']; // Assuming user_id is the unique identifier for the user
-        $_SESSION['user_fullname'] = $user['user_fullname']; // Assuming user_id is the unique identifier for the user
-        $_SESSION['user_contact'] = $user['user_contact_num']; // Assuming user_id is the unique identifier for the user
+        $_SESSION['user_id'] = $user['user_id']; 
+        $_SESSION['user_fullname'] = $user['user_fullname']; 
+        $_SESSION['user_contact'] = $user['user_contact_num']; 
 
         header("Location: /");
         exit;

@@ -21,7 +21,7 @@
                 <li class="links__link"><a href="/account/sign-up">Sign-Up</a></li>
                 <?php endif; ?>
             </menu>
-            <a class="cart_link" href="/cart"><img class="cart_link__icon" src="/assets/icons/iconmonstr-basket-6.svg" alt="Access your product cart."></a>
+            <a class="cart_link" href="/account/cart"><img class="cart_link__icon" src="/assets/icons/iconmonstr-basket-6.svg" alt="Access your product cart."></a>
             <menu class="links links--menu_mobile" data-js="menu_mobile">
                 <li class="links__link"><a href="/account/sign-up">Sign-up for a new account</a></li>
                 <li class="links__link"><a href="/account/log-in">Log-in to your account</a></li>
