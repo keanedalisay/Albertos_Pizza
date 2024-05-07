@@ -14,6 +14,7 @@ session_start(); // Start session
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="shortcut icon" href="/assets/icons/albertos-pizza-mascot.png" />
     <script src="scripts/global.js" defer></script>
+    <script src="scripts/addCart.js" defer></script>
 </head>
 
 <body>
@@ -41,8 +42,10 @@ session_start(); // Start session
                 <h1 class="product__heading">ALOHA</h1>
                 <h2 class="product__heading2">9-inch with Quickmelt starts at ₱115</h2>
                 <p class="product__subheading">Lots of pineapples, ham sausage, mushroom, and green bell pepper.</p>
-                <form action="/cart" method="post">
+                <form action="/account/cart" class="menu-item" method="post">
                     <button class="product__button">Add to cart</button>
+                    <input type="hidden" name="pizza_name" value="Aloha Pizza">
+                    <input type="hidden" name="pizza_price" value="115">
                 </form>
                 <a href="/products/pizzas/regular/aloha" class="product__button">Customize</a>
             </article>
@@ -54,8 +57,10 @@ session_start(); // Start session
                 <p class="product__subheading">Spanish sardines, tuna flakes, crab
                     stick, anchovies, shrimp, carrots,
                     pickles, onions, and tomatoes. </p>
-                <form action="/cart" method="post">
+                <form action="/account/cart" class="menu-item" method="post">
                     <button class="product__button">Add to cart</button>
+                    <input type="hidden" name="pizza_name" value="Pizza D' Marina">
+                    <input type="hidden" name="pizza_price" value="290">
                 </form>
                 <a class="product__button">Customize</a>
             </article>
@@ -65,8 +70,10 @@ session_start(); // Start session
                 <h2 class="product__heading2">9-inch with Quickmelt starts at ₱125</h2>
                 <p class="product__subheading">Pork pepperoni, bacon, mushroom, onions, pineapple tidbits, black olives,
                     and green bell peppers.</p>
-                <form action="/cart" method="post">
+                <form action="/account/cart" class="menu-item" method="post">
                     <button class="product__button">Add to cart</button>
+                    <input type="hidden" name="pizza_name" value="Pizza Supreme">
+                    <input type="hidden" name="pizza_price" value="125">
                 </form>
                 <a class="product__button">Customize</a>
             </article>
@@ -76,8 +83,10 @@ session_start(); // Start session
                 <h2 class="product__heading2">11-inch with Quickmelt and Mozarella starts at ₱290</h2>
                 <p class="product__subheading">Pork pepperoni, bacon, mushroom, onions, pineapple tidbits, black olives,
                     and green bell peppers.</p>
-                <form action="/cart" method="post">
+                <form action="/account/cart" class="menu-item" method="post">
                     <button class="product__button">Add to cart</button>
+                    <input type="hidden" name="pizza_name" value="Royal Flush">
+                    <input type="hidden" name="pizza_price" value="290">
                 </form>
                 <a class="product__button">Customize</a>
             </article>
