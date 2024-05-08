@@ -1,0 +1,99 @@
+main {
+    margin: 0 auto;
+}
+
+.banner {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    height: 100%;
+    background-image: url("../assets/images/pizza-banner-home.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner__title {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.banner__title-text {
+    font-size: 60px;
+    color: #212121;
+    text-align: center;
+    margin-top: 0;
+}
+
+.banner__image {
+    margin: 0 auto;
+    width: 320px;
+}
+
+.banner__logo-image {
+    width: 100%;
+}
+
+.banner__subtitle {
+    display: flex;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.banner__subtitle-text {
+    font-size: 30px;
+    color: #212121;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .banner__title {
+        max-width: 500px;
+    }
+
+    .banner__image {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner {
+        padding-top: 0;
+        padding-bottom: 80px;
+    }
+
+    .banner__title {
+        width: 90%;
+        max-width: 350px;
+        height: 100%;
+        opacity: 1;
+        margin-top: 0px;
+        padding-top: 50px;
+    }
+
+    .banner__image {
+        width: 150px;
+    }
+
+    .banner__logo-image {
+        padding-right: 20px;
+        width: 200px;
+    }
+
+    .banner__title-text {
+        font-size: 40px;
+        justify-content: center;
+    }
+
+    .banner__subtitle {
+        padding: 0 20px;
+        width: 90%;
+        justify-content: center;
+    }
+
+    .banner__subtitle-text {
+        font-size: 20px;
+    }
+}

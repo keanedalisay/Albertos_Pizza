@@ -1,0 +1,94 @@
+.log_in_container {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #000000;
+}
+
+.input-field {
+    margin-bottom: 50px;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.input-field input {
+    width: calc(60% - 40px);
+    padding: 6px;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    color: #000000;
+}
+
+.input-field p.error {
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.checkbox-field {
+    margin-bottom: 70px;
+}
+
+.checkbox-field input {
+    margin-right: 5px;
+}
+
+.checkbox-field label {
+    line-height: 18px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.login-button {
+    display: block;
+    margin: 50px auto;
+    width: calc(100% - 20px);
+    max-width: 200px;
+    background-color: #f1f1f1;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.login-button:hover {
+    background-color: #e0e0e0;
+}
+
+.login-button {
+    display: block;
+    margin: 10px auto;
+    /* Adjust margin if needed */
+    width: calc(100% - 20px);
+    max-width: 200px;
+    background-color: #f1f1f1;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.login-button:hover {
+    background-color: #e0e0e0;
+}
