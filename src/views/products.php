@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alberto's Pizza | Home</title>
-    <link rel="stylesheet" href="/public/styles/global.css">
-    <link rel="stylesheet" href="/public/styles/products.css">
-    <link rel="shortcut icon"  href="/public/assets/icons/albertos-pizza-mascot.png" />
-    <script src="/public/scripts/global.js" defer></script> 
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/products.css">
+    <link rel="shortcut icon"  href="/assets/icons/albertos-pizza-mascot.png" />
+    <script src="/scripts/global.js" defer></script> 
 </head>
 <body>
 <div class="background-image"></div>
@@ -20,15 +20,15 @@
     </div>
     <div class="main__button" id="main__1">
         <h4 class="main__button-title">Regular Pizza's</h4>
-        <div class="main__button-image"><img src="/public/assets/icons/iconmonstr-arrow-right-circle-filled.svg" class="main-odernow-button"></div> 
+        <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg" class="main-odernow-button"></div> 
     </div>
     <div class="main__button" id="main__1">
         <h4 class="main__button-title">Spicy Pizza's</h4>
-        <div class="main__button-image"><img src="/public/assets/icons/iconmonstr-arrow-right-circle-filled.svg" class="main-odernow-button"></div> 
+        <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg" class="main-odernow-button"></div> 
     </div>
     <div class="main__button" id="main__1">
         <h4 class="main__button-title">For Kids Pizza's</h4>
-        <div class="main__button-image"><img src="/public/assets/icons/iconmonstr-arrow-right-circle-filled.svg" class="main-odernow-button"></div> 
+        <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg" class="main-odernow-button"></div> 
     </div>    
 </div>
 <div class="main__subtitle">   
@@ -88,7 +88,7 @@
 <div class="Featured__line2"></div>
 <div class="main__button" id="main__4">
     <h4 class="main__button-title">For Kids Pizza's</h4>
-    <div class="main__button-image"><img src="/public/assets/icons/iconmonstr-arrow-right-circle-filled.svg" class="main-odernow-button"></div> 
+    <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg" class="main-odernow-button"></div> 
 </div>    
 </div>
 <div class="Pizza" id="Pizza1">

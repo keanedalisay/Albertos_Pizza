@@ -20,7 +20,7 @@ get("/account/sign-up", "../src/views/sign-up.php");
 get("/account/log-in", "../src/views/log-in.php");
 get("/account/logout", "../src/views/logout.php");
 get("/account/cart", "../src/views/cart.php");
-
+get("/products", "../src/views/products.php");
 
 get("/account/log-in/forgot-password", "../src/views/forgot-password.php");
 get("/account/log-in/change-password", "../src/views/change-password.php");
