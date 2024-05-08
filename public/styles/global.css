@@ -254,6 +254,33 @@ a:hover {
     display: none;
 }
 
+.link-button {
+    margin: 0 auto;
+    width: 250px;
+    min-height: 45px;
+    padding: 10px 20px;
+    background-color: #FFFF7E;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+
+.link-button:not(.link-button:first-of-type) {
+    margin: 30px auto 0 auto;
+}
+
+.link-button:hover, .link-button:focus {
+    outline: 2px solid blue;
+    text-decoration: none;
+}
+
+.link-button__icon {
+    width: 20px;
+    height: 20px;
+}
+
 .footer {
     margin-top: 30px;
     padding: 20px 40px 80px 40px;
@@ -282,6 +309,12 @@ a:hover {
     display: inline-block;
 }
 
+@media only screen and (max-width: 1200px) {
+    .link-button:not(.link-button:first-of-type) {
+        margin-top: 30px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .products {
         padding-top: 40px;
@@ -303,6 +336,13 @@ a:hover {
     }
     .product__subheading {
         font-size: 14px;
+    }
+
+    .link-button:not(.link-button:first-of-type) {
+        margin-top: 30px;
+    }
+    .link-button {
+        width: 200px;
     }
 }
 

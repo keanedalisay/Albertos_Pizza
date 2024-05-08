@@ -17,21 +17,18 @@
     <main>
         <div class="main__title" id="main__1">
             <h2 class="main__title-text">Browse our assortment of pizzas!</h2>
-        </div>
-        <div class="main__button" id="main__1">
-            <h4 class="main__button-title">Regular Pizza's</h4>
-            <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg"
-                    class="main-odernow-button"></div>
-        </div>
-        <div class="main__button" id="main__1">
-            <h4 class="main__button-title">Spicy Pizza's</h4>
-            <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg"
-                    class="main-odernow-button"></div>
-        </div>
-        <div class="main__button" id="main__1">
-            <h4 class="main__button-title">For Kids Pizza's</h4>
-            <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg"
-                    class="main-odernow-button"></div>
+            <a href="/products/pizzas/regular" class="link-button">
+                Regular Pizza's
+                <img class="link-button__icon" src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg">
+            </a>
+            <a href="/products/pizzas/spicy" class="link-button">
+                Spicy Pizza's
+                <img class="link-button__icon" src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg">
+            </a>
+            <a href="/products/pizzas/for-kids" class="link-button">
+                For Kid's Pizza's
+                <img class="link-button__icon" src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg">
+            </a>
         </div>
         <section class="products">
             <h2 class="products__title">And below are pizza's our customers love!</h2>
@@ -106,42 +103,41 @@
         </section>
         <section class="products">
             <h2 class="products__title">Pair your pizza’s with our side products!</h2>
-            <div class="main__button" id="main__4">
-                <h4 class="main__button-title">Side Products</h4>
-                <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg"
-                        class="main-odernow-button"></div>
-            </div>
+            <a href="/products/sides" class="link-button link-button--sides">
+                Side Products
+                <img class="link-button__icon" src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg">
+            </a>
             <div>
-            <article class="product">
-                <img class="product__image" src="../assets/images/sides/halo-halo.jpg" alt="">
-                <h1 class="product__heading">HALO-HALO</h1>
-                <h2 class="product__heading2">Starts at ₱68</h2>
-                <form action="/account/cart" class="menu-item" method="post">
-                    <button class="product__button">Add to cart</button>
-                    <input type="hidden" name="pizza_name" value="Halo-Halo">
-                    <input type="hidden" name="pizza_price" value="68">
-                </form>
-            </article>
-            <article class="product">
-                <img class="product__image" src="../assets/images/sides/ice-cream-sundae.jpg" alt="">
-                <h1 class="product__heading">ICE CREAM SUNDAE</h1>
-                <h2 class="product__heading2">Starts at ₱98</h2>
-                <form action="/account/cart" class="menu-item" method="post">
-                    <button class="product__button">Add to cart</button>
-                    <input type="hidden" name="pizza_name" value="Ice Cream Sundae">
-                    <input type="hidden" name="pizza_price" value="98">
-                </form>
-            </article>
-            <article class="product">
-                <img class="product__image" src="../assets/images/sides/spaghetti.jpg" alt="">
-                <h1 class="product__heading">SPAGHETTI</h1>
-                <h2 class="product__heading2">Starts at ₱57</h2>
-                <form action="/account/cart" class="menu-item" method="post">
-                    <button class="product__button">Add to cart</button>
-                    <input type="hidden" name="pizza_name" value="Spaghetti">
-                    <input type="hidden" name="pizza_price" value="57">
-                </form>
-            </article>
+                <article class="product">
+                    <img class="product__image" src="../assets/images/sides/halo-halo.jpg" alt="">
+                    <h1 class="product__heading">HALO-HALO</h1>
+                    <h2 class="product__heading2">Starts at ₱68</h2>
+                    <form action="/account/cart" class="menu-item" method="post">
+                        <button class="product__button">Add to cart</button>
+                        <input type="hidden" name="pizza_name" value="Halo-Halo">
+                        <input type="hidden" name="pizza_price" value="68">
+                    </form>
+                </article>
+                <article class="product">
+                    <img class="product__image" src="../assets/images/sides/ice-cream-sundae.jpg" alt="">
+                    <h1 class="product__heading">ICE CREAM SUNDAE</h1>
+                    <h2 class="product__heading2">Starts at ₱98</h2>
+                    <form action="/account/cart" class="menu-item" method="post">
+                        <button class="product__button">Add to cart</button>
+                        <input type="hidden" name="pizza_name" value="Ice Cream Sundae">
+                        <input type="hidden" name="pizza_price" value="98">
+                    </form>
+                </article>
+                <article class="product">
+                    <img class="product__image" src="../assets/images/sides/spaghetti.jpg" alt="">
+                    <h1 class="product__heading">SPAGHETTI</h1>
+                    <h2 class="product__heading2">Starts at ₱57</h2>
+                    <form action="/account/cart" class="menu-item" method="post">
+                        <button class="product__button">Add to cart</button>
+                        <input type="hidden" name="pizza_name" value="Spaghetti">
+                        <input type="hidden" name="pizza_price" value="57">
+                    </form>
+                </article>
             </div>
         </section>
     </main>

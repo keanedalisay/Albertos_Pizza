@@ -9,7 +9,7 @@ session_start(); // Start session
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alberto's Pizza | Home</title>
+    <title>Welcome to Alberto's Pizza</title>
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="shortcut icon" href="/assets/icons/albertos-pizza-mascot.png" />
@@ -20,6 +20,7 @@ session_start(); // Start session
 <body>
     <?php require_once dirname(__DIR__, 1) . "/components/header.php" ?>
     <main>
+        <div class="background-image"></div>
         <section class="banner">
             <div class="banner__title" id="banner__1">
                 <h1 class="banner__title-text">Experience the unforgettable taste of</h1>
@@ -29,10 +30,9 @@ session_start(); // Start session
             <div class="banner__subtitle" id="banner__1">
                 <h2 class="banner__subtitle-text">a flavor you’ll crave again and again.</h2>
             </div>
-            <a class="link-button">
-                Order Now
-                <img class="link-button__icon" src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg"
-                    class="main-odernow-button"></div>
+            <a href="/products" class="link-button">
+                Order Our Products
+                <img class="link-button__icon" src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg">
             </a>
         </section>
         <section class="products">

@@ -1,94 +1,50 @@
 .background-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-image: url("../assets/images/orange-outlined-pizza.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("../assets/images/orange-outlined-pizza.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
 }
 
 .main__title {
-  padding-top: 100px;
-  display: flex;
-  width: 700px;
-  margin: 0 auto;
+    margin: 0 auto 50px auto;
+    padding-top: 100px;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 700px;
 }
 
 .main__title-text {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 65px;
-  color: #212121;
-  text-align: center;
-  margin-top: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 65px;
+    color: #212121;
+    text-align: center;
+    margin-top: 0;
 }
 
-
-.main__subtitle {
-  width: 450px;
-  margin: 100px auto;
-}
-
-.main__button {
-  background-color: #F6F6F6;
-  border-radius: 14px;
-  width: 250px;
-  height: 60px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 3%;
-  transition: background-color 0.3s;
-}
-
-.main__button:hover {
-  background-color: #CCCCCC;
-}
-
-.main__button-title {
-  margin-left: 10px;
-  font-size: 20px;
-  text-decoration: underline;
-  font-weight: 700;
-  color: #212121;
-}
-
-.main__button-title:hover {
-  text-decoration: none;
-}
-
-.main-odernow-button {
-  margin-right: 10px;
-  height: 30px;
-  width: 30px;
+.link-button--sides {
+    margin-bottom: 40px;
 }
 
 
 @media only screen and (max-width: 768px) {
-  .main__title {
-      width: 61%;
-      height: 100%;
-      opacity: 1;
-      margin-top: 0px;
-      padding-top: 50px;
-  }
+    .main__title {
+        margin-bottom: 30px;
+        width: 61%;
+        height: 100%;
+        opacity: 1;
+        margin-top: 0px;
+        padding-top: 50px;
+    }
 
-  .main__title-text {
-      font-size: 40px;
-      justify-content: center;
-  }
-
-  .main__button {
-      width: 180px;
-  }
-
-  .main__button-title {
-      font-size: 16px;
-      font-weight: bold;
-  }
+    .main__title-text {
+        font-size: 40px;
+        justify-content: center;
+    }
 }
