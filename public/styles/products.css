@@ -148,21 +148,21 @@
 #all {
   height: 100px;
   background-color: blue;
-  background-image: url("../assets/images/Pizza_s/all-pepperoni.jpg");
+  background-image: url("../assets/images/pizzas/all-pepperoni.jpg");
   background-size: cover;
 }
 
 #supreme {
   height: 100px;
   background-color: blue;
-  background-image: url("../assets/images/Pizza_s/pizza-supreme.jpg");
+  background-image: url("../assets/images/pizzas/pizza-supreme.jpg");
   background-size: cover;
 }
 
 #ham {
   height: 100px;
   background-color: blue;
-  background-image: url("../assets/images/Pizza_s/pizza-d-marina.jpg");
+  background-image: url("../assets/images/pizzas/pizza-d-marina.jpg");
   background-size: cover;
 }
 #hawa {
@@ -174,7 +174,7 @@
 #royal {
   height: 100px;
   background-color: blue;
-  background-image: url("../assets/images/Pizza_s/royal-flush.jpg");
+  background-image: url("../assets/images/pizzas/royal-flush.jpg");
   background-size: cover;
 }
 
