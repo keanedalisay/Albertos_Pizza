@@ -1,0 +1,376 @@
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../assets/images/orange-outlined-pizza.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+}
+
+
+.main {
+}
+
+.main__title {
+  padding-top: 100px;
+  display: flex;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.main__title-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 65px;
+  color: #212121;
+  text-align: center;
+  margin-top: 0;
+}
+
+
+.main__subtitle {
+  width: 450px;
+  margin: 100px auto;
+}
+
+.main__subtitle-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 40px;
+  color: #212121;
+  text-align: center;
+  margin-top: 0;
+}
+
+.main__button {
+  background-color: #F6F6F6;
+  border-radius: 14px;
+  width: 250px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3%;
+  transition: background-color 0.3s;
+}
+
+.main__button:hover {
+  background-color: #CCCCCC;
+}
+
+.main__button-title {
+  margin-left: 10px;
+  font-size: 20px;
+  text-decoration: underline;
+  font-weight: 700;
+  color: #212121;
+}
+
+.main__button-title:hover {
+  text-decoration: none;
+}
+
+.main-odernow-button {
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+}
+
+.Featured {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Featured__container {
+  display: flex;
+  align-items: center;
+}
+
+.Featured__line1{
+  margin: 0px auto;
+  background-color: #FFB368;
+  width: 450px;
+  height: 3px;
+  transform: rotate(-2.03deg);
+}
+
+.Featured__line2{
+  margin: 0px auto;
+  background-color: #FFB368;
+  width: 450px;
+  height: 3px;
+  transform: rotate(2.03deg);
+}
+
+.Featured__title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 30px;
+  color: #212121;
+  margin: 0;
+}
+
+.Pizza {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  flex-wrap: nowrap;
+  margin-top: 50px;
+}
+
+.Pizza_box {
+  height: 450px;
+  width: 300px;
+  margin: 0 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.Pizza_box_image {
+  height: 20%;
+  margin-bottom: 6px;
+}
+
+.Pizza_box_heading,
+.Pizza_box_heading2,
+.Pizza_box_subheading,
+.Pizza_box_addtocart,
+.Pizza_box_customize {
+  font-size: 20px;
+  padding: 5px;
+}
+
+#all {
+  height: 100px;
+  background-color: blue;
+  background-image: url("../assets/images/Pizza_s/all-pepperoni.jpg");
+  background-size: cover;
+}
+
+#supreme {
+  height: 100px;
+  background-color: blue;
+  background-image: url("../assets/images/Pizza_s/pizza-supreme.jpg");
+  background-size: cover;
+}
+
+#ham {
+  height: 100px;
+  background-color: blue;
+  background-image: url("../assets/images/Pizza_s/pizza-d-marina.jpg");
+  background-size: cover;
+}
+#hawa {
+  height: 100px;
+  background-color: blue;
+  background-image: url("../assets/images/Pizza_s/aloha.jpg");
+  background-size: cover;
+}
+#royal {
+  height: 100px;
+  background-color: blue;
+  background-image: url("../assets/images/Pizza_s/royal-flush.jpg");
+  background-size: cover;
+}
+
+#halo {
+  height: 200px;
+  background-color: none;
+  background-image: url("../assets/images/sides/halo-halo.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#ice {
+  height: 200px;
+  background-color: none;
+  background-image: url("../assets/images/sides/ice-cream-sundae.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#sphag {
+  height: 200px;
+  background-color: none;
+  background-image: url("../assets/images/sides/spaghetti.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Pizza_box_heading {
+  font-weight: 400;
+  height: 30px;
+  font-size: 25px;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #FFFF7E;
+}
+
+.Pizza_box_heading2 {
+  font-weight: 100;
+  height: 50px;
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #FFFF7E;
+}
+
+.Pizza_box_subheading {
+  margin-top: 8px;
+  font-weight: 300;
+  height: 100px;
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #ffffff;
+}
+
+.Pizza_box_addtocart {
+  width: 60%;
+  height: 35px;
+  background-color: #F6F6F6;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 10px;
+}
+
+.Pizza_box_customize {
+  width: 60%;
+  height: 35px;
+  background-color: #F6F6F6;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.Pizza_box_addtocart:hover {
+  background-color: #CCCCCC;
+}
+
+.Pizza_box_customize:hover {
+  background-color: #CCCCCC;
+}
+
+#Pizza2 {
+  margin-top: 50px;
+}
+#main__4{
+  margin-top: 50px;
+}
+@media only screen and (max-width: 768px) {
+
+  .main__title {
+      width: 61%;
+      height: 100%;
+      opacity: 1;
+      margin-top: 0px;
+      padding-top: 50px;
+  }
+
+  .main__image {
+      width: 150px;
+      height: 80px;
+      margin: 0 auto;
+      padding-left: 65px;
+  }
+
+  .main__logo-image {
+      width: 150px;
+      height: 80px;
+  }
+
+  .main__title-text {
+      font-size: 30px;
+      justify-content: center;
+  }
+
+  .main__subtitle {
+      width: 282px;
+      justify-content: center;
+  }
+
+  .main__subtitle-text {
+      font-size: 24px;
+  }
+
+  .main__button {
+      width: 180px;
+  }
+
+  .main__button-title {
+      font-size: 16px;
+      font-weight: bold;
+  }
+
+  .main__image {
+      width: 200px;
+      height: 120px;
+  }
+
+  .Featured__line1,
+  .Featured__line2{
+      width: 95%;
+      height: 2px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+  }
+
+
+  #Pizza1 {
+      height: 1100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  #Pizza2 {
+        margin-top: 30px;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  }
+  .Pizza_box {
+      height: 400px;
+      width: 250px;
+      margin-bottom: 20px;
+  }
+
+  .Pizza_box_image {
+      height: 120px;
+  }
+
+  .Pizza_box_heading {
+      font-size: 24px;
+      height: auto;
+      margin-bottom: 5px;
+  }
+
+  .Pizza_box_heading2 {
+      font-size: 18px;
+      height: auto;
+      margin-bottom: 5px;
+  }
+
+  .Pizza_box_subheading {
+      font-size: 14px;
+      height: auto;
+      margin-bottom: 10px;
+  }
+
+  .Pizza_box_addtocart,
+  .Pizza_box_customize {
+      width: 90%;
+      font-size: 16px;
+      height: 35px;
+  }
+}
