@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alberto's Pizza | Home</title>
+    <title>Our Products</title>
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/products.css">
     <link rel="shortcut icon" href="/assets/icons/albertos-pizza-mascot.png" />
@@ -14,115 +14,137 @@
 <body>
     <div class="background-image"></div>
     <?php require_once dirname(__DIR__, 1) . "/components/header.php" ?>
-    <div class="main">
+    <main>
         <div class="main__title" id="main__1">
             <h2 class="main__title-text">Browse our assortment of pizzas!</h2>
         </div>
-
-    </div>
-    <div class="main__button" id="main__1">
-        <h4 class="main__button-title">Regular Pizza's</h4>
-        <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg"
-                class="main-odernow-button"></div>
-    </div>
-    <div class="main__button" id="main__1">
-        <h4 class="main__button-title">Spicy Pizza's</h4>
-        <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg"
-                class="main-odernow-button"></div>
-    </div>
-    <div class="main__button" id="main__1">
-        <h4 class="main__button-title">For Kids Pizza's</h4>
-        <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg"
-                class="main-odernow-button"></div>
-    </div>
-    </div>
-    <div class="main__subtitle">
-        <h2 class="main__subtitle-text">And below are pizza’s our customers love!</h2>
-        <div class="Featured__line1"></div>
-    </div>
-    <div class="Pizza" id="Pizza1">
-        <div class="Pizza_box">
-            <div class="Pizza_box_image" id="all"></div>
-            <div class="Pizza_box_heading">ALL PEPPERONI</div>
-            <div class="Pizza_box_heading2">9-inch with Quickmelt starts at ₱160</div>
-            <div class="Pizza_box_subheading">Pork pepperoni with hot sauce.</div>
-            <div class="Pizza_box_addtocart">add to cart</div>
-            <div class="Pizza_box_customize">customize</div>
+        <div class="main__button" id="main__1">
+            <h4 class="main__button-title">Regular Pizza's</h4>
+            <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg"
+                    class="main-odernow-button"></div>
         </div>
-        <div class="Pizza_box">
-            <div class="Pizza_box_image" id="supreme"></div>
-            <div class="Pizza_box_heading">PIZZA SUPREME</div>
-            <div class="Pizza_box_heading2">9-inch with Quickmelt and
-                Mozarella starts at ₱125</div>
-            <div class="Pizza_box_subheading">Pork pepperoni, bacon, mushroom, onions, pineapple tidbits, black olives,
-                and green bell peppers.</div>
-            <div class="Pizza_box_addtocart">add to cart</div>
-            <div class="Pizza_box_customize">customize</div>
+        <div class="main__button" id="main__1">
+            <h4 class="main__button-title">Spicy Pizza's</h4>
+            <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg"
+                    class="main-odernow-button"></div>
         </div>
-
-        <div class="Pizza_box">
-            <div class="Pizza_box_image" id="ham"></div>
-            <div class="Pizza_box_heading">HAM DELIGHT</div>
-            <div class="Pizza_box_heading2">9-inch with Quickmelt starts at ₱125</div>
-            <div class="Pizza_box_subheading">All ham</div>
-            <div class="Pizza_box_addtocart">add to cart</div>
-            <div class="Pizza_box_customize">customize</div>
-        </div>
-    </div>
-    <div class="Pizza" id="Pizza2">
-        <div class="Pizza_box">
-            <div class="Pizza_box_image" id="hawa"></div>
-            <div class="Pizza_box_heading">HAWAIIAN</div>
-            <div class="Pizza_box_heading2">9-inch with Quickmelt and Mozarella starts at ₱125</div>
-            <div class="Pizza_box_subheading">Ham, bacon, pineapple tidbits, mushroom, onions, and green bell pepper.
-            </div>
-            <div class="Pizza_box_addtocart">add to cart</div>
-            <div class="Pizza_box_customize">customize</div>
-        </div>
-        <div class="Pizza_box">
-            <div class="Pizza_box_image" id="royal"></div>
-            <div class="Pizza_box_heading">ROYAL FLUSH</div>
-            <div class="Pizza_box_heading2">11-inch with Quickmelt and Mozarella starts at ₱290</div>
-            <div class="Pizza_box_subheading">Cheese krainer, pork pepperoni, hungarian sausage, ham sausage, hotdog,
-                chicken hotdog, hamonado, ground beef, chicken minced, tuna flakes, ham.</div>
-            <div class="Pizza_box_addtocart">add to cart</div>
-            <div class="Pizza_box_customize">customize</div>
-        </div>
-    </div>
-
-    </div>
-    <div class="main__subtitle">
-        <h2 class="main__subtitle-text">Pair your pizza’s with our side products!</h2>
-        <div class="Featured__line2"></div>
-        <div class="main__button" id="main__4">
+        <div class="main__button" id="main__1">
             <h4 class="main__button-title">For Kids Pizza's</h4>
             <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg"
                     class="main-odernow-button"></div>
         </div>
-    </div>
-    <div class="Pizza" id="Pizza1">
-        <div class="Pizza_box">
-            <div class="Pizza_box_image" id="halo"></div>
-            <div class="Pizza_box_heading">HALO-HALO</div>
-            <div class="Pizza_box_heading2">Starts at ₱68</div>
-            <div class="Pizza_box_addtocart">add to cart</div>
-
-        </div>
-        <div class="Pizza_box">
-            <div class="Pizza_box_image" id="ice"></div>
-            <div class="Pizza_box_heading">ICE SCREAM SUNDAE</div>
-            <div class="Pizza_box_heading2">Starts at ₱98</div>
-            <div class="Pizza_box_addtocart">add to cart</div>
-        </div>
-
-        <div class="Pizza_box">
-            <div class="Pizza_box_image" id="sphag"></div>
-            <div class="Pizza_box_heading">ALBETO'S SPAGHETTI</div>
-            <div class="Pizza_box_heading2">Starts at ₱57</div>
-            <div class="Pizza_box_addtocart">add to cart</div>
-
-        </div>
-    </div>
+        <section class="products">
+            <h2 class="products__title">And below are pizza's our customers love!</h2>
+            <div>
+                <article class="product">
+                    <img class="product__image" src="../assets/images/pizzas/all-pepperoni.jpg" alt="">
+                    <h1 class="product__heading">ALL PEPPERONI</h1>
+                    <h2 class="product__heading2">9-inch with Quickmelt starts at ₱160</h2>
+                    <p class="product__subheading">Pork pepperoni with hot sauce.</p>
+                    <form action="/account/cart" class="menu-item" method="post">
+                        <button class="product__button">Add to cart</button>
+                        <input type="hidden" name="pizza_name" value="All Pepperoni">
+                        <input type="hidden" name="pizza_price" value="160">
+                    </form>
+                    <a href="/products/pizzas/regular/aloha" class="product__button">Customize</a>
+                </article>
+                <article class="product">
+                    <img class="product__image" src="../assets/images/pizzas/pizza-supreme.jpg" alt="">
+                    <h1 class="product__heading">PIZZA SUPREME</h1>
+                    <h2 class="product__heading2">9-inch with Quickmelt starts at ₱125</h2>
+                    <p class="product__subheading">Pork pepperoni, bacon, mushroom, onions, pineapple tidbits, black
+                        olives,
+                        and green bell peppers.</p>
+                    <form action="/account/cart" class="menu-item" method="post">
+                        <button class="product__button">Add to cart</button>
+                        <input type="hidden" name="pizza_name" value="Pizza Supreme">
+                        <input type="hidden" name="pizza_price" value="125">
+                    </form>
+                    <a href="/products/pizzas/regular/aloha" class="product__button">Customize</a>
+                </article>
+                <article class="product">
+                    <img class="product__image" src="../assets/images/pizzas/ham-delight.jpg" alt="">
+                    <h1 class="product__heading">HAM DELIGHT</h1>
+                    <h2 class="product__heading2">9-inch with Quickmelt starts at ₱125</h2>
+                    <p class="product__subheading">All ham.</p>
+                    <form action="/account/cart" class="menu-item" method="post">
+                        <button class="product__button">Add to cart</button>
+                        <input type="hidden" name="pizza_name" value="Ham Delight">
+                        <input type="hidden" name="pizza_price" value="125">
+                    </form>
+                    <a href="/products/pizzas/regular/aloha" class="product__button">Customize</a>
+                </article>
+                <article class="product">
+                    <img class="product__image" src="../assets/images/pizzas/hawaiian.jpg" alt="">
+                    <h1 class="product__heading">HAWAIIAN</h1>
+                    <h2 class="product__heading2">9-inch with Quickmelt starts at ₱125</h2>
+                    <p class="product__subheading">Ham, bacon, pineapple tidbits, mushroom, onions, and green bell
+                        pepper.
+                    </p>
+                    <form action="/account/cart" class="menu-item" method="post">
+                        <button class="product__button">Add to cart</button>
+                        <input type="hidden" name="pizza_name" value="Hawaiian">
+                        <input type="hidden" name="pizza_price" value="125">
+                    </form>
+                    <a href="/products/pizzas/regular/aloha" class="product__button">Customize</a>
+                </article>
+                <article class="product">
+                    <img class="product__image" src="../assets/images/pizzas/royal-flush.jpg" alt="">
+                    <h1 class="product__heading">ROYAL FLUSH</h1>
+                    <h2 class="product__heading2">11-inch with Quickmelt and Mozarella starts at ₱290</h2>
+                    <p class="product__subheading">Cheese krainer, pork pepperoni, hungarian sausage, ham sausage,
+                        hotdog,
+                        chicken hotdog, hamonado, ground beef, chicken minced, tuna flakes, ham.</p>
+                    <form action="/account/cart" class="menu-item" method="post">
+                        <button class="product__button">Add to cart</button>
+                        <input type="hidden" name="pizza_name" value="Royal Flush">
+                        <input type="hidden" name="pizza_price" value="290">
+                    </form>
+                    <a href="/products/pizzas/regular/aloha" class="product__button">Customize</a>
+                </article>
+            </div>
+        </section>
+        <section class="products">
+            <h2 class="products__title">Pair your pizza’s with our side products!</h2>
+            <div class="main__button" id="main__4">
+                <h4 class="main__button-title">Side Products</h4>
+                <div class="main__button-image"><img src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg"
+                        class="main-odernow-button"></div>
+            </div>
+            <div>
+            <article class="product">
+                <img class="product__image" src="../assets/images/sides/halo-halo.jpg" alt="">
+                <h1 class="product__heading">HALO-HALO</h1>
+                <h2 class="product__heading2">Starts at ₱68</h2>
+                <form action="/account/cart" class="menu-item" method="post">
+                    <button class="product__button">Add to cart</button>
+                    <input type="hidden" name="pizza_name" value="Halo-Halo">
+                    <input type="hidden" name="pizza_price" value="68">
+                </form>
+            </article>
+            <article class="product">
+                <img class="product__image" src="../assets/images/sides/ice-cream-sundae.jpg" alt="">
+                <h1 class="product__heading">ICE CREAM SUNDAE</h1>
+                <h2 class="product__heading2">Starts at ₱98</h2>
+                <form action="/account/cart" class="menu-item" method="post">
+                    <button class="product__button">Add to cart</button>
+                    <input type="hidden" name="pizza_name" value="Ice Cream Sundae">
+                    <input type="hidden" name="pizza_price" value="98">
+                </form>
+            </article>
+            <article class="product">
+                <img class="product__image" src="../assets/images/sides/spaghetti.jpg" alt="">
+                <h1 class="product__heading">SPAGHETTI</h1>
+                <h2 class="product__heading2">Starts at ₱57</h2>
+                <form action="/account/cart" class="menu-item" method="post">
+                    <button class="product__button">Add to cart</button>
+                    <input type="hidden" name="pizza_name" value="Spaghetti">
+                    <input type="hidden" name="pizza_price" value="57">
+                </form>
+            </article>
+            </div>
+        </section>
+    </main>
     <?php require_once dirname(__DIR__, 1) . "/components/footer.php" ?>
 
 </body>
