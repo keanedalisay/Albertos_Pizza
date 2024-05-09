@@ -75,7 +75,7 @@ a:hover {
 .menu_btn {
     margin-right: 5px;
     width: 100px;
-    height: 50px;
+    height: 40px;
     background: none;
     border: none;
     display: flex;
@@ -105,11 +105,12 @@ a:hover {
 }
 
 .cart_link {
-    min-width: 50px;
-    min-height: 50px;
+    min-width: 40px;
+    min-height: 40px;
     position: relative;
-    background: none;
+    background: #FFFF7E;
     border: none;
+    border-radius: 10px;
 }
 
 .cart_link:hover {
@@ -117,8 +118,27 @@ a:hover {
 }
 
 .cart_link__icon {
-    position: relative;
-    transform: translate(50%, 50%);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cart_link__count {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 25px;
+    right: -12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EE0000;
+    border-radius: 100%;
+    font-weight: 700;
+    color: #ffffff;
 }
 
 .products {
