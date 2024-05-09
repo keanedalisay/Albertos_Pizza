@@ -1,8 +1,0 @@
-{
-    "name": "keane_dalisay/albertos_pizza",
-    "type": "project",
-    "require": {
-        "twilio/sdk": "^7.3",
-       "stripe/stripe-php":"^14.0"
-    }
-}

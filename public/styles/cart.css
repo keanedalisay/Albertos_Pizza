@@ -1,0 +1,161 @@
+main {
+    margin-bottom: 125px;
+}
+
+#cart-title {
+    margin-top: 70px;
+    margin-bottom: 50px;
+    width: 80%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+#cart-title h1 {
+    font-size: 40px;
+}
+
+#cart-total {
+    margin: 0 auto;
+    max-width: 300px;
+    display: block;
+    text-align: center;
+}
+
+#cart-total #total-cost {
+    font-size: 34px;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid orange;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(-2deg) translateX(0%);
+}
+
+#cart-total .amount {
+    font-weight: bold;
+}
+
+.product-group {
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.product {
+    height: auto;
+    width: 90%;
+    max-width: 360px;
+    margin-bottom: 60px;
+}
+
+.order__heading {
+    margin: 0;
+    padding: 0px 0px 0px 20px;
+    min-height: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFF7E;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.column:not(.column:last-of-type) {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.product__text {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.product-container {
+    margin: 0 auto 20px auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-group {
+    width: 100%;
+    max-width: 400px;
+}
+
+.total-cost-label {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.order__image{
+    width: 100%;
+    object-fit: cover;
+}
+
+.product__subheading {
+    margin-top: 10px;
+    word-wrap: break-word;
+    width: calc(180% - 10px);
+}
+
+.spacer {
+    display: inline-block;
+    width: 100px;
+}
+
+.customize_button {
+    font-size: 16px;
+    padding: 10px 59px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.customize_button {
+    margin-right: 20px;
+}
+
+.increment-button,
+.decrement-button {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.quantity {
+    font-size: 16px;
+    padding: 5px 5px;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 740px) {
+    #cart-title {
+        margin-top: 50px;
+    }
+}
