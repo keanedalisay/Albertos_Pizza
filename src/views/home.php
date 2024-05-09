@@ -1,7 +1,6 @@
 <?php
-session_start(); // Start session
+session_start(); 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +13,7 @@ session_start(); // Start session
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="shortcut icon" href="/assets/icons/albertos-pizza-mascot.png" />
     <script src="scripts/global.js" defer></script>
-    <script src="scripts/addCart.js" defer></script>
+    <script src="scripts/add-to-cart.js" defer></script>
 </head>
 
 <body>

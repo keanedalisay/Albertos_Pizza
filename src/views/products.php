@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +13,7 @@
     <link rel="stylesheet" href="/styles/products.css">
     <link rel="shortcut icon" href="/assets/icons/albertos-pizza-mascot.png" />
     <script src="/scripts/global.js" defer></script>
+    <script src="/scripts/add-to-cart.js" defer></script>
 </head>
 
 <body>
