@@ -113,8 +113,9 @@ a:hover {
     border-radius: 10px;
 }
 
-.cart_link:hover {
-    background: #f6f6f6;
+.cart_link:hover,
+.cart_link:focus {
+    outline: 2px solid blue;
 }
 
 .cart_link__icon {
