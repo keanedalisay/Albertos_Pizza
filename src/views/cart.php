@@ -1,27 +1,40 @@
 <?php
 session_start();
 
-$totalCost = 0;
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = [];
+    }
 
     if (isset($_POST['pizza_name']) && isset($_POST['pizza_price'])) {
         // Get the pizza name and price from the POST data
         $pizzaName = $_POST['pizza_name'];
         $pizzaPrice = intval($_POST['pizza_price']);
+        $pizzaCheese = $_POST['pizza_cheese'];
+        $pizzaSize = $_POST['pizza_size'];
 
-        if (!isset($_SESSION['cart'])) {
-            $_SESSION['cart'] = [];
-        }
-        $_SESSION['cart'][] = ['name' => $pizzaName, 'price' => $pizzaPrice];
+        $_SESSION['cart'][] = [
+            'pizza_name' => $pizzaName, 
+            'pizza_price' => $pizzaPrice, 
+            'pizza_size' => $pizzaSize,
+            'pizza_cheese' => $pizzaCheese
+        ];
+
+    } else {
+        $sideName = $_POST['side_name'];
+        $sidePrice = intval($_POST['side_price']);
+
+        $_SESSION['cart'][] = [
+            'side_name' => $sideName, 
+            'side_price' => $sidePrice, 
+        ];
     }
 }
 
-// Calculate total cost
-if (isset($_SESSION['cart'])) {
-    foreach ($_SESSION['cart'] as $pizza) {
-        $totalCost += $pizza['price'];
-    }
+$totalCost = 0;
+foreach ($_SESSION['cart'] as $item) {
+    $totalCost += isset($item['pizza_price']) ? $item['pizza_price'] : $item['side_price'];
 }
 
 ?>
@@ -53,114 +66,44 @@ if (isset($_SESSION['cart'])) {
         </section>
 
         <div class="product-container">
-        <article class="product">
-                    <h1 class="order__heading">
-                        <div class="column">
-                            <span class="product__text">ALOHA</span>
-                        </div>
-                        <div class="column">
-                            <span class="total-cost-label">Total Cost:</span>
-                            <span class="amount">₱145</span>
-                        </div>
-                        <div class="column">
-                            <img class="order__image" src="../assets/images/pizzas/aloha-pizza.jpg" alt="">
-                        </div>
-                    </h1>
-                    <p class="product__subheading">9-inch, Mozarella <span class="spacer"></span>Quantity:</p>
-                    <form action="/account/cart" class="menu-item" method="post">
-                        <div class="button-container">
-                            <button class="customize_button">Customize</button>
-                            <div class="quantity-buttons">
-                                <button class="decrement-button">-</button>
-                                <span class="quantity">1</span>
-                                <button class="increment-button">+</button>
-                            </div>
-                        </div>
-                        <input type="hidden" name="pizza_name" value="Aloha Pizza">
-                        <input type="hidden" name="pizza_price" value="145">
-                    </form>
-                </article>
+        <?php 
+            $cart = $_SESSION['cart'];
+            foreach ($cart as $key => $item): ?>
                 <article class="product">
                     <h1 class="order__heading">
                         <div class="column">
-                            <span class="product__text">PIZZA D' MARINA</span>
+                            <span class="product__text"><?= isset($item['pizza_name']) ? strtoupper($item['pizza_name']) : strtoupper($item['side_name']) ?></span>
                         </div>
                         <div class="column">
                             <span class="total-cost-label">Total Cost:</span>
-                            <span class="amount">₱290</span>
+                            <span class="amount">₱<?=isset($item['pizza_price']) ? $item['pizza_price'] : $item['side_price']?></span>
                         </div>
                         <div class="column">
-                            <img class="order__image" src="../assets/images/pizzas/pizza-d-marina.jpg" alt="">
+                            <?php if (empty($item['side_name'])): ?>
+                                <img class="order__image" src="../assets/images/pizzas/<?= str_replace(' ','-',strtolower($item['pizza_name']))?>.jpg" alt="">
+                            <?php else: ?>
+                                <img class="order__image" src="../assets/images/sides/<?= str_replace(' ','_',strtolower($item['side_name']))?>.jpg" alt="">
+                            <?php endif; ?>
                         </div>
                     </h1>
-                    <p class="product__subheading">11-inch, Quickmelt <span class="spacer"></span>Quantity:</p>
+                    <?php if (empty($item['side_name'])): ?>
+                        <p class="product__subheading"><?=$item['pizza_size'] . ', ' . $item['pizza_cheese']?> <span class="spacer"></span>Quantity:</p>
+                    <?php else: ?>
+                        <p class="product__subheading"><span class="spacer"></span>Quantity:</p>
+                    <?php endif; ?>
                     <form action="/account/cart" class="menu-item" method="post">
-                        <div class="button-container">
+                        <div class="button-container" style="<?= empty($item['side_name']) ? '' : 'justify-content: center;'?>">
+                        <?php if (empty($item['side_name'])): ?>
                             <button class="customize_button">Customize</button>
+                        <?php endif; ?>
                             <div class="quantity-buttons">
                                 <button class="decrement-button">-</button>
                                 <span class="quantity">1</span>
                                 <button class="increment-button">+</button>
                             </div>
-                        </div>
-                        <input type="hidden" name="pizza_name" value="Pizza D' Marina">
-                        <input type="hidden" name="pizza_price" value="290">
                     </form>
                 </article>
-                <article class="product">
-                    <h1 class="order__heading">
-                        <div class="column">
-                            <span class="product__text">ALOHA</span>
-                        </div>
-                        <div class="column">
-                            <span class="total-cost-label">Total Cost:</span>
-                            <span class="amount">₱350</span>
-                        </div>
-                        <div class="column">
-                            <img class="order__image" src="../assets/images/pizzas/aloha-pizza.jpg" alt="">
-                        </div>
-                    </h1>
-                    <p class="product__subheading">11-inch, Quickmelt <span class="spacer"></span>Quantity:</p>
-                    <form action="/account/cart" class="menu-item" method="post">
-                        <div class="button-container">
-                            <button class="customize_button">Customize</button>
-                            <div class="quantity-buttons">
-                                <button class="decrement-button">-</button>
-                                <span class="quantity">1</span>
-                                <button class="increment-button">+</button>
-                            </div>
-                        </div>
-                        <input type="hidden" name="pizza_name" value="Aloha Pizza">
-                        <input type="hidden" name="pizza_price" value="350">
-                    </form>
-                </article>
-                <article class="product">
-                    <h1 class="order__heading">
-                        <div class="column">
-                            <span class="product__text">HALO- HALO ESPESYAL</span>
-                        </div>
-                        <div class="column">
-                            <span class="total-cost-label">Total Cost:</span>
-                            <span class="amount">₱290</span>
-                        </div>
-                        <div class="column">
-                            <img class="order__image" src="../assets/images/Sides/halo-halo.jpg" alt="">
-                        </div>
-                    </h1>
-                    <p class="product__subheading"><span class="spacer">&nbsp;&nbsp;&nbsp;&nbsp;</span>Quantity:</p>
-                    <form action="/account/cart" class="menu-item" method="post">
-                        <div class="button-container">
-                            <button class="customize_button">Customize</button>
-                            <div class="quantity-buttons">
-                                <button class="decrement-button">-</button>
-                                <span class="quantity">1</span>
-                                <button class="increment-button">+</button>
-                            </div>
-                        </div>
-                        <input type="hidden" name="pizza_name" value="Halo-Halo Espesyal">
-                        <input type="hidden" name="pizza_price" value="290">
-                    </form>
-                </article>
+           <?php endforeach; ?>
         </div>
 
         <a href="/checkout/order-mode" class="link-button">
