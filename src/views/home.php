@@ -18,7 +18,7 @@ session_start();
 
 <body>
     <?php require_once dirname(__DIR__, 1) . "/components/header.php" ?>
-    <main>
+    <main data-js="main">
         <div class="background-image"></div>
         <section class="banner">
             <div class="banner__title" id="banner__1">

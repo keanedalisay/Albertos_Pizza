@@ -19,7 +19,7 @@ session_start();
 <body>
     <div class="background-image"></div>
     <?php require_once dirname(__DIR__, 1) . "/components/header.php" ?>
-    <main>
+    <main data-js="main">
         <div class="main__title" id="main__1">
             <h2 class="main__title-text">Browse our assortment of pizzas!</h2>
             <a href="/products/pizzas/regular" class="link-button">
