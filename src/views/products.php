@@ -129,8 +129,8 @@ session_start();
                     <h2 class="product__heading2">Starts at ₱68</h2>
                     <form action="/account/cart" class="menu-item" method="post">
                         <button class="product__button">Add to cart</button>
-                        <input type="hidden" name="pizza_name" value="Halo-Halo">
-                        <input type="hidden" name="pizza_price" value="68">
+                        <input type="hidden" name="side_name" value="Halo-Halo">
+                        <input type="hidden" name="side_price" value="68">
                     </form>
                 </article>
                 <article class="product">
@@ -139,8 +139,8 @@ session_start();
                     <h2 class="product__heading2">Starts at ₱98</h2>
                     <form action="/account/cart" class="menu-item" method="post">
                         <button class="product__button">Add to cart</button>
-                        <input type="hidden" name="pizza_name" value="Ice Cream Sundae">
-                        <input type="hidden" name="pizza_price" value="98">
+                        <input type="hidden" name="side_name" value="Ice Cream Sundae">
+                        <input type="hidden" name="side_price" value="98">
                     </form>
                 </article>
                 <article class="product">
@@ -149,8 +149,8 @@ session_start();
                     <h2 class="product__heading2">Starts at ₱57</h2>
                     <form action="/account/cart" class="menu-item" method="post">
                         <button class="product__button">Add to cart</button>
-                        <input type="hidden" name="pizza_name" value="Spaghetti">
-                        <input type="hidden" name="pizza_price" value="57">
+                        <input type="hidden" name="side_name" value="Spaghetti">
+                        <input type="hidden" name="side_price" value="57">
                     </form>
                 </article>
             </div>
