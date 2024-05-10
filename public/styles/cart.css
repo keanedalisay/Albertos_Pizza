@@ -17,29 +17,16 @@ main {
     margin-bottom: 125px;
 }
 
-#cart-title {
-    margin-top: 70px;
-    margin-bottom: 50px;
-    width: 80%;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    text-align: center;
-}
-
-#cart-title h1 {
-    font-size: 40px;
-}
-
 #cart-total {
-    margin: 0 auto;
+    margin: 100px auto 0 auto;
     max-width: 300px;
     display: block;
     text-align: center;
+}
+
+#cart-total #total-label {
+    font-weight: 400;
+    font-size: 16px;
 }
 
 #cart-total #total-cost {
@@ -58,12 +45,36 @@ main {
     font-weight: bold;
 }
 
+#cart-empty {
+    position: relative;
+    margin: 40px auto 120px auto;
+    padding: 10px 20px;
+    display: inline-block;
+    background: #FFFF7E;
+    border-radius: 10px;
+    font-size: 60px;
+    font-weight: 700;
+    max-width: 600px;
+    text-align: center;
+}
+
+#cart-empty > span {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 400;
+    transform: translateX(-50%);
+}
+
 .product-group {
     width: 60%;
     margin-bottom: 30px;
 }
 
 .product {
+    position: relative;
     height: auto;
     width: 90%;
     max-width: 360px;
@@ -136,6 +147,30 @@ main {
     width: 100px;
 }
 
+.remove_button {
+    position: absolute;
+    top: -15px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 100%;
+    background: #ee0000;
+}
+.remove_button:hover,
+.remove_button:focus {
+   outline: 2px solid blue;
+}
+
+.remove_button > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    transform: translate(-50%, -50%);
+}
+
 .customize_button {
     font-size: 16px;
     padding: 10px 59px;
@@ -174,6 +209,28 @@ main {
 
 @media only screen and (max-width: 740px) {
     #cart-title {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #cart-empty {
+        margin: 40px auto 50px auto;
+        font-size: 40px;
+    }
+    #cart-empty > span {
+        top: 80px;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #cart-empty {
+        padding: 10px 5px;
+        width: 80%;
+    }
+    #cart-empty > span{
+        width: 80%;
         margin-top: 50px;
     }
 }
