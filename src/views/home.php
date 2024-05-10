@@ -45,6 +45,8 @@ session_start();
                     <form action="/account/cart" class="menu-item" method="post">
                         <button class="product__button">Add to cart</button>
                         <input type="hidden" name="pizza_name" value="Aloha Pizza">
+                        <input type="hidden" name="pizza_cheese" value="Quickmelt">
+                        <input type="hidden" name="pizza_size" value="9-inch">
                         <input type="hidden" name="pizza_price" value="115">
                     </form>
                     <a href="/products/pizzas/regular/aloha" class="product__button">Customize</a>
@@ -60,6 +62,8 @@ session_start();
                     <form action="/account/cart" class="menu-item" method="post">
                         <button class="product__button">Add to cart</button>
                         <input type="hidden" name="pizza_name" value="Pizza D' Marina">
+                        <input type="hidden" name="pizza_cheese" value="Quickmelt and Mozarella">
+                        <input type="hidden" name="pizza_size" value="11-inch">
                         <input type="hidden" name="pizza_price" value="290">
                     </form>
                     <a class="product__button">Customize</a>
@@ -74,6 +78,8 @@ session_start();
                     <form action="/account/cart" class="menu-item" method="post">
                         <button class="product__button">Add to cart</button>
                         <input type="hidden" name="pizza_name" value="Pizza Supreme">
+                        <input type="hidden" name="pizza_cheese" value="Quickmelt">
+                        <input type="hidden" name="pizza_size" value="9-inch">
                         <input type="hidden" name="pizza_price" value="125">
                     </form>
                     <a class="product__button">Customize</a>
@@ -88,6 +94,8 @@ session_start();
                     <form action="/account/cart" class="menu-item" method="post">
                         <button class="product__button">Add to cart</button>
                         <input type="hidden" name="pizza_name" value="Royal Flush">
+                        <input type="hidden" name="pizza_cheese" value="Quickmelt and Mozarella">
+                        <input type="hidden" name="pizza_size" value="11-inch">
                         <input type="hidden" name="pizza_price" value="290">
                     </form>
                     <a class="product__button">Customize</a>
