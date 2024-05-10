@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once (dirname(__DIR__, 3) . "/vendor/autoload.php");
 
@@ -6,6 +7,26 @@ require_once (dirname(__DIR__, 3) . "/vendor/autoload.php");
 header('Content-Type: application/json');
 
 $YOUR_DOMAIN = 'http://localhost';
+
+$cart = $_SESSION['cart'];
+$line_items = [];
+
+foreach ($cart as $item) {
+  $line_item = [
+    'price_data' => [
+      'currency' => 'php',
+      'product_data' => [
+          'name' => isset($item['pizza_name']) ? $item['pizza_name'] : $item['side_name']
+        ],
+      'unit_amount' => (isset($item['pizza_name']) ? $item['pizza_price'] : $item['side_price']) * 100,
+    ],
+    'quantity' => 1,
+  ];
+
+  array_push($line_items, $line_item);
+}
+
+// var_dump($line_items);
 
 $checkout_session = \Stripe\Checkout\Session::create([
   /**
@@ -18,31 +39,8 @@ $checkout_session = \Stripe\Checkout\Session::create([
    * 'line_items' is where we will put the individual products purchased 
    * by the user, each property denoting the details like the name or price 
    * of the product.
-  */
-  'line_items' => [
-    [
-      'price_data' => [ 
-        'currency' => 'php',
-        'product_data' => [
-          'name' => 'Stubborn Attachments',
-          'images' => ['https://i.imgur.com/EHyR2nP.png']
-        ],
-        'unit_amount' => 10000,
-      ],
-      'quantity' => 1,
-    ],
-    [
-      'price_data' => [
-        'currency' => 'php',
-        'product_data' => [
-          'name' => 'Stubborn Attachments',
-          'images' => ['https://i.imgur.com/EHyR2nP.png']
-        ],
-        'unit_amount' => 10000,
-      ],
-      'quantity' => 1,
-    ]
-  ],
+   */
+  'line_items' => $line_items,
   'mode' => 'payment',
   'success_url' => $YOUR_DOMAIN . '/orders',
   'cancel_url' => $YOUR_DOMAIN . '/checkout/contact-info',
