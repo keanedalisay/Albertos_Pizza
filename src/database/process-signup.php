@@ -41,10 +41,21 @@ class User {
             return "PDO Error: " . $e->getMessage();
         }
     }
+
+    public function phoneExists($phone) {
+        $stmt = $this->pdo->prepare("SELECT COUNT(*) FROM users WHERE user_contact_num = ?");
+        $stmt->execute([$phone]);
+        return $stmt->fetchColumn() > 0;
+    }
+
+    public function updatePhoneNumber($userId, $phone) {
+        $stmt = $this->pdo->prepare("UPDATE users SET user_contact_num = ? WHERE user_id = ?");
+        $stmt->execute([$phone, $userId]);
+    }
 }
 
 // Create an instance of DatabaseConnection
-$databaseConnection = new DatabaseConnection("localhost", "albertos_database", "root", "");
+$databaseConnection = new DatabaseConnection("localhost", "albertos_db", "root", "");
 
 // Call the connect() method to establish a connection
 $pdo = $databaseConnection->connect();

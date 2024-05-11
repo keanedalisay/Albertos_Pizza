@@ -31,7 +31,7 @@ $is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Create an instance of DatabaseConnection
-    $databaseConnection = new DatabaseConnection("localhost", "albertos_database", "root", "");
+    $databaseConnection = new DatabaseConnection("localhost", "albertos_db", "root", "");
 
     // Call the connect() method to establish a connection
     $pdo = $databaseConnection->connect();

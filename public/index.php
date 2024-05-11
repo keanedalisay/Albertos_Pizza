@@ -21,6 +21,7 @@ get("/account/log-in", "../src/views/log-in.php");
 get("/account/logout", "../src/views/logout.php");
 get("/account/cart", "../src/views/cart.php");
 get("/products", "../src/views/products.php");
+get("/account", "../src/views/my-account.php");
 
 get("/checkout/order-mode", "../src/views/checkout/order-mode.php");
 get("/checkout/address", "../src/views/checkout/address.php");
@@ -32,6 +33,7 @@ get("/account/log-in/change-password", "../src/views/change-password.php");
 post("/account/sign-up", "../src/database/process-signup.php");
 post("/account/log-in", "../src/views/log-in.php");
 post("/account/cart", "../src/views/cart.php");
+post("/account", "../src/views/my-account.php");
 
 post("/checkout/address", "../src/views/checkout/address.php");
 post("/checkout/contact-info", "../src/views/checkout/contact-info.php");

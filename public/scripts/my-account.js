@@ -15,6 +15,10 @@ function deleteAddressContainer() {
     }
 }
 
+function logout() {
+    window.location.href = '/account/logout';
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const addAddressButton = document.getElementById("add-address-button");
     const addressContainerWrapper = document.getElementById("address-container-wrapper");
