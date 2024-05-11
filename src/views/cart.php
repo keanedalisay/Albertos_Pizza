@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$totalCost = 0;
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isset($_POST['remove_item']) && $_POST['remove_item'] == 1) {
@@ -43,9 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$totalCost = 0;
-foreach ($_SESSION['cart'] as $item) {
-    $totalCost += isset($item['pizza_price']) ? $item['pizza_price'] : $item['side_price'];
+if (isset($_SESSION['cart'])) {
+    foreach ($_SESSION['cart'] as $item) {
+        $totalCost += isset($item['pizza_price']) ? $item['pizza_price'] : $item['side_price'];
+    }
 }
 
 ?>
@@ -75,71 +78,72 @@ foreach ($_SESSION['cart'] as $item) {
 
         <div class="product-container">
             <?php
+
             $cart = $_SESSION['cart'];
 
-            if (count($cart) < 1): ?>
+            if (empty($cart)): ?>
                 <h2 id="cart-empty">Your carts empty. <br> <span>Why not buy yourself a pizza?</span></h2>
-            <?php endif; ?>
-
-            <?php foreach ($cart as $key => $item): ?>
-                <article class="product">
-                    <form action="/account/cart" method="post">
-                        <input type="hidden" name="remove_item" value="1">
-                        <?php if (empty($item['side_name'])): ?>
-                            <input type="hidden" name="pizza_name" value="<?= $item['pizza_name'] ?>">
-                            <input type="hidden" name="pizza_cheese" value="<?= $item['pizza_cheese'] ?>">
-                            <input type="hidden" name="pizza_size" value="<?= $item['pizza_size'] ?>">
-                        <?php else: ?>
-                            <input type="hidden" name="side_name" value="<?= $item['side_name'] ?>">
-                        <?php endif; ?>
-                        <button class="remove_button" type="submit"><img
-                                src="/assets/icons/iconmonstr-x-mark-1.svg"></button>
-                    </form>
-                    <h1 class="order__heading">
-                        <div class="column">
-                            <span
-                                class="product__text"><?= isset($item['pizza_name']) ? strtoupper($item['pizza_name']) : strtoupper($item['side_name']) ?></span>
-                        </div>
-                        <div class="column">
-                            <span class="total-cost-label">Total Cost:</span>
-                            <span
-                                class="amount">₱<?= isset($item['pizza_price']) ? $item['pizza_price'] : $item['side_price'] ?></span>
-                        </div>
-                        <div class="column">
+            <?php else: ?>
+                <?php foreach ($cart as $key => $item): ?>
+                    <article class="product">
+                        <form action="/account/cart" method="post">
+                            <input type="hidden" name="remove_item" value="1">
                             <?php if (empty($item['side_name'])): ?>
-                                <img class="order__image"
-                                    src="../assets/images/pizzas/<?= str_replace(' ', '-', strtolower($item['pizza_name'])) ?>.jpg"
-                                    alt="">
+                                <input type="hidden" name="pizza_name" value="<?= $item['pizza_name'] ?>">
+                                <input type="hidden" name="pizza_cheese" value="<?= $item['pizza_cheese'] ?>">
+                                <input type="hidden" name="pizza_size" value="<?= $item['pizza_size'] ?>">
                             <?php else: ?>
-                                <img class="order__image"
-                                    src="../assets/images/sides/<?= str_replace(' ', '_', strtolower($item['side_name'])) ?>.jpg"
-                                    alt="">
+                                <input type="hidden" name="side_name" value="<?= $item['side_name'] ?>">
                             <?php endif; ?>
-                        </div>
-                    </h1>
-                    <?php if (empty($item['side_name'])): ?>
-                        <p class="product__subheading"><?= $item['pizza_size'] . ', ' . $item['pizza_cheese'] ?> <span
-                                class="spacer"></span>Quantity:</p>
-                    <?php else: ?>
-                        <p class="product__subheading"><span class="spacer"></span>Quantity:</p>
-                    <?php endif; ?>
-                    <form action="/account/cart" class="menu-item" method="post">
-                        <div class="button-container"
-                            style="<?= empty($item['side_name']) ? '' : 'justify-content: center;' ?>">
-                            <?php if (empty($item['side_name'])): ?>
-                                <button class="customize_button">Customize</button>
-                            <?php endif; ?>
-                            <div class="quantity-buttons">
-                                <button class="decrement-button">-</button>
-                                <span class="quantity">1</span>
-                                <button class="increment-button">+</button>
+                            <button class="remove_button" type="submit"><img
+                                    src="/assets/icons/iconmonstr-x-mark-1.svg"></button>
+                        </form>
+                        <h1 class="order__heading">
+                            <div class="column">
+                                <span
+                                    class="product__text"><?= isset($item['pizza_name']) ? strtoupper($item['pizza_name']) : strtoupper($item['side_name']) ?></span>
                             </div>
-                    </form>
-                </article>
-            <?php endforeach; ?>
+                            <div class="column">
+                                <span class="total-cost-label">Total Cost:</span>
+                                <span
+                                    class="amount">₱<?= isset($item['pizza_price']) ? $item['pizza_price'] : $item['side_price'] ?></span>
+                            </div>
+                            <div class="column">
+                                <?php if (empty($item['side_name'])): ?>
+                                    <img class="order__image"
+                                        src="../assets/images/pizzas/<?= str_replace(' ', '-', strtolower($item['pizza_name'])) ?>.jpg"
+                                        alt="">
+                                <?php else: ?>
+                                    <img class="order__image"
+                                        src="../assets/images/sides/<?= str_replace(' ', '_', strtolower($item['side_name'])) ?>.jpg"
+                                        alt="">
+                                <?php endif; ?>
+                            </div>
+                        </h1>
+                        <?php if (empty($item['side_name'])): ?>
+                            <p class="product__subheading"><?= $item['pizza_size'] . ', ' . $item['pizza_cheese'] ?> <span
+                                    class="spacer"></span>Quantity:</p>
+                        <?php else: ?>
+                            <p class="product__subheading"><span class="spacer"></span>Quantity:</p>
+                        <?php endif; ?>
+                        <form action="/account/cart" class="menu-item" method="post">
+                            <div class="button-container"
+                                style="<?= empty($item['side_name']) ? '' : 'justify-content: center;' ?>">
+                                <?php if (empty($item['side_name'])): ?>
+                                    <button class="customize_button">Customize</button>
+                                <?php endif; ?>
+                                <div class="quantity-buttons">
+                                    <button class="decrement-button">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="increment-button">+</button>
+                                </div>
+                        </form>
+                    </article>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
 
-        <?php if (count($cart) >= 1): ?>
+        <?php if (!empty($cart)): ?>
             <a href="/checkout/order-mode" class="link-button">
                 Checkout
                 <img class="link-button__icon" src="/assets/icons/iconmonstr-arrow-right-circle-filled.svg"
