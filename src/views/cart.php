@@ -79,7 +79,8 @@ if (isset($_SESSION['cart'])) {
         <div class="product-container">
             <?php
 
-            $cart = $_SESSION['cart'];
+            if (isset($_SESSION['cart']))
+                $cart = $_SESSION['cart'];
 
             if (empty($cart)): ?>
                 <h2 id="cart-empty">Your carts empty. <br> <span>Why not buy yourself a pizza?</span></h2>
